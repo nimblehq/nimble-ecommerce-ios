@@ -40,8 +40,15 @@ struct EcommerceiOSWidgetEntryView: View {
 
     var entry: Provider.Entry
 
+    @Environment(\.widgetFamily) var family
+
     var body: some View {
-        Text(entry.date, style: .time)
+        switch family {
+        case .systemSmall:
+            SmallWidgetView()
+        default:
+            Text(entry.date, style: .time)
+        }
     }
 }
 
