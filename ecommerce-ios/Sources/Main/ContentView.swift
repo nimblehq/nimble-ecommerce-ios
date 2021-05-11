@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var showSplash = true
-
     var body: some View {
         ZStack {
             Text("Hello, world!")

@@ -154,20 +154,12 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		90D907202643DD9400D37F16 /* Source */ = {
+		90D907202643DD9400D37F16 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				90D907302643DE4800D37F16 /* Main */,
-				90D907272643DDD000D37F16 /* Splash */,
 			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		90D907272643DDD000D37F16 /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Splash;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		90D907302643DE4800D37F16 /* Main */ = {
@@ -206,7 +198,7 @@
 			children = (
 				90D9071E2643DD7300D37F16 /* Application */,
 				909562AF2643F2FC0028E442 /* Extensions */,
-				90D907202643DD9400D37F16 /* Source */,
+				90D907202643DD9400D37F16 /* Sources */,
 				90F6BD9F2642B13900419FE2 /* Preview Content */,
 			);
 			path = "ecommerce-ios";
