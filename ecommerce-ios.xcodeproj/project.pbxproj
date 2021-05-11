@@ -3,12 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6467343FA56259DB3EDB535D /* Pods_ecommerce_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D984921251D777A83D13F4C /* Pods_ecommerce_iosTests.framework */; };
 		68875C670E9C0BAA948075CD /* Pods_ecommerce_ios_ecommerce_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0FAF7BF83FE643955750F /* Pods_ecommerce_ios_ecommerce_iosUITests.framework */; };
+		909562A32643EC950028E442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909562A22643EC950028E442 /* R.generated.swift */; };
+		909562A82643ED040028E442 /* R.typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909562A72643ED040028E442 /* R.typealiases.swift */; };
+		909562B12643F3150028E442 /* View+Hidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909562B02643F3150028E442 /* View+Hidden.swift */; };
+		90D096222649211800717D05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D096212649211800717D05 /* LaunchScreen.storyboard */; };
 		90F6BD9A2642B13500419FE2 /* EcommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BD992642B13500419FE2 /* EcommerceApp.swift */; };
 		90F6BD9C2642B13500419FE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BD9B2642B13500419FE2 /* ContentView.swift */; };
 		90F6BD9E2642B13900419FE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BD9D2642B13900419FE2 /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 		4D8676CF800C031A87683C6E /* Pods_ecommerce_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommerce_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		527EEA037DD196936C693420 /* Pods-ecommerce-ios-ecommerce-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ecommerce-ios-ecommerce-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-ecommerce-ios-ecommerce-iosUITests/Pods-ecommerce-ios-ecommerce-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E6F06D5536065202D17B037 /* Pods-ecommerce-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ecommerce-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-ecommerce-iosTests/Pods-ecommerce-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		909562A22643EC950028E442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		909562A72643ED040028E442 /* R.typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.typealiases.swift; sourceTree = "<group>"; };
+		909562B02643F3150028E442 /* View+Hidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Hidden.swift"; sourceTree = "<group>"; };
+		90D096212649211800717D05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90F6BD962642B13500419FE2 /* ecommerce-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ecommerce-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F6BD992642B13500419FE2 /* EcommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceApp.swift; sourceTree = "<group>"; };
 		90F6BD9B2642B13500419FE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +118,59 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		909562882643EB0C0028E442 /* R.swift */ = {
+			isa = PBXGroup;
+			children = (
+				909562A22643EC950028E442 /* R.generated.swift */,
+				909562A72643ED040028E442 /* R.typealiases.swift */,
+			);
+			path = R.swift;
+			sourceTree = "<group>";
+		};
+		909562AF2643F2FC0028E442 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				909562B02643F3150028E442 /* View+Hidden.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		90D9071E2643DD7300D37F16 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				90D096212649211800717D05 /* LaunchScreen.storyboard */,
+				90F6BDA22642B13900419FE2 /* Info.plist */,
+				90D9071F2643DD8000D37F16 /* Resources */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		90D9071F2643DD8000D37F16 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BD9D2642B13900419FE2 /* Assets.xcassets */,
+				909562882643EB0C0028E442 /* R.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		90D907202643DD9400D37F16 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				90D907302643DE4800D37F16 /* Main */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		90D907302643DE4800D37F16 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BD992642B13500419FE2 /* EcommerceApp.swift */,
+				90F6BD9B2642B13500419FE2 /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		90F6BD8D2642B13500419FE2 = {
 			isa = PBXGroup;
 			children = (
@@ -135,10 +196,9 @@
 		90F6BD982642B13500419FE2 /* ecommerce-ios */ = {
 			isa = PBXGroup;
 			children = (
-				90F6BD992642B13500419FE2 /* EcommerceApp.swift */,
-				90F6BD9B2642B13500419FE2 /* ContentView.swift */,
-				90F6BD9D2642B13900419FE2 /* Assets.xcassets */,
-				90F6BDA22642B13900419FE2 /* Info.plist */,
+				90D9071E2643DD7300D37F16 /* Application */,
+				909562AF2643F2FC0028E442 /* Extensions */,
+				90D907202643DD9400D37F16 /* Sources */,
 				90F6BD9F2642B13900419FE2 /* Preview Content */,
 			);
 			path = "ecommerce-ios";
@@ -178,10 +238,12 @@
 			buildConfigurationList = 90F6BDBB2642B13900419FE2 /* Build configuration list for PBXNativeTarget "ecommerce-ios" */;
 			buildPhases = (
 				02373F85F7AFD06384B50F37 /* [CP] Check Pods Manifest.lock */,
+				909562352643E55C0028E442 /* R.Swift */,
 				90F6BD922642B13500419FE2 /* Sources */,
 				90F6BD932642B13500419FE2 /* Frameworks */,
 				90F6BD942642B13500419FE2 /* Resources */,
 				90F6BDD12643A3A400419FE2 /* Swiftlint script */,
+				0E5AA44680947642B11BB382 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +281,7 @@
 				90F6BDAE2642B13900419FE2 /* Sources */,
 				90F6BDAF2642B13900419FE2 /* Frameworks */,
 				90F6BDB02642B13900419FE2 /* Resources */,
+				12B4718912A5FAAFD60E59D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D096222649211800717D05 /* LaunchScreen.storyboard in Resources */,
 				90F6BDA12642B13900419FE2 /* Preview Assets.xcassets in Resources */,
 				90F6BD9E2642B13900419FE2 /* Assets.xcassets in Resources */,
 			);
@@ -319,6 +383,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E5AA44680947642B11BB382 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ecommerce-ios/Pods-ecommerce-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ecommerce-ios/Pods-ecommerce-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ecommerce-ios/Pods-ecommerce-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12B4718912A5FAAFD60E59D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ecommerce-ios-ecommerce-iosUITests/Pods-ecommerce-ios-ecommerce-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ecommerce-ios-ecommerce-iosUITests/Pods-ecommerce-ios-ecommerce-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ecommerce-ios-ecommerce-iosUITests/Pods-ecommerce-ios-ecommerce-iosUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		15EC48D1EDEBBBE29F31DC3F /* [CP] Check Pods Manifest.lock */ = {
@@ -365,6 +463,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		909562352643E55C0028E442 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/ecommerce-ios/Application/Resources/R.swift/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/ecommerce-ios/Application/Resources/R.swift/R.generated.swift\"\n";
+		};
 		90F6BDD12643A3A400419FE2 /* Swiftlint script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,7 +499,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --fix\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -390,8 +508,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909562B12643F3150028E442 /* View+Hidden.swift in Sources */,
 				90F6BD9C2642B13500419FE2 /* ContentView.swift in Sources */,
+				909562A82643ED040028E442 /* R.typealiases.swift in Sources */,
 				90F6BD9A2642B13500419FE2 /* EcommerceApp.swift in Sources */,
+				909562A32643EC950028E442 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +673,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ecommerce-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "ecommerce-ios/Info.plist";
+				INFOPLIST_FILE = "ecommerce-ios/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,7 +695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ecommerce-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "ecommerce-ios/Info.plist";
+				INFOPLIST_FILE = "ecommerce-ios/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

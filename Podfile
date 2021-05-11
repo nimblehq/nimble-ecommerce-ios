@@ -4,6 +4,7 @@ platform :ios, '10.0'
 target 'ecommerce-ios' do
 
   pod 'SwiftLint'
+  pod 'R.swift'
 
   target 'ecommerce-iosTests' do
     inherit! :search_paths
