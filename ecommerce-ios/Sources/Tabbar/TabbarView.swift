@@ -14,41 +14,13 @@ struct TabbarView: View {
     var body: some View {
         TabView(selection: $selection) {
             HomeView()
-                .tabItem {
-                    if selection == 0 {
-                        Image("tabbar/home-fill")
-                    } else {
-                        Image("tabbar/home")
-                    }
-                }
-                .tag(0)
+                .withTabbar($selection, tab: .home)
             SearchView()
-                .tabItem {
-                    if selection == 1 {
-                        Image("tabbar/search-fill")
-                    } else {
-                        Image("tabbar/search")
-                    }
-                }
-                .tag(1)
+                .withTabbar($selection, tab: .search)
             MyCartView()
-                .tabItem {
-                    if selection == 2 {
-                        Image("tabbar/cart-fill")
-                    } else {
-                        Image("tabbar/cart")
-                    }
-                }
-                .tag(2)
+                .withTabbar($selection, tab: .myCart)
             ProfileView()
-                .tabItem {
-                    if selection == 3 {
-                        Image("tabbar/profile-fill")
-                    } else {
-                        Image("tabbar/profile")
-                    }
-                }
-                .tag(3)
+                .withTabbar($selection, tab: .profile)
         }
         .accentColor(.mainBlue)
     }
