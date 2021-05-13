@@ -30,7 +30,10 @@ extension Color {
     /// #DADADA
     static var altoGray: Color { Color(hex: 0xDADADA) }
 
-    // MARK: - Violet
+    /// #EFEFEF
+    static var galleryGray: Color { Color(hex: 0xEFEFEF) }
+
+    // MARK - Violet
 
     /// #534ACC
     static var indigoViolet: Color { Color(hex: 0x534ACC) }
