@@ -52,22 +52,20 @@ private struct NavigationBarLargeTitleItems<T: View>: UIViewControllerRepresenta
             else { return }
 
             navigationBar.subviews.forEach { subview in
-                if subview.isKind(of: navigationBarLargeTitleView.self) {
-                    let controller = UIHostingController(rootView: representable.trailingItems)
-                    controller.view.translatesAutoresizingMaskIntoConstraints = false
-                    subview.addSubview(controller.view)
+                guard subview.isKind(of: navigationBarLargeTitleView.self),
+                      let titleLabel = subview.subviews.first(where: { $0.isKind(of: UILabel.self) })
+                else { return }
+                let controller = UIHostingController(rootView: representable.trailingItems)
+                controller.view.translatesAutoresizingMaskIntoConstraints = false
+                subview.addSubview(controller.view)
 
-                    NSLayoutConstraint.activate([
-                        controller.view.bottomAnchor.constraint(
-                            equalTo: subview.bottomAnchor,
-                            constant: -13.0
-                        ),
-                        controller.view.trailingAnchor.constraint(
-                            equalTo: subview.trailingAnchor,
-                            constant: -view.directionalLayoutMargins.trailing - 16.0
-                        )
-                    ])
-                }
+                NSLayoutConstraint.activate([
+                    controller.view.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+                    controller.view.trailingAnchor.constraint(
+                        equalTo: subview.trailingAnchor,
+                        constant: -view.directionalLayoutMargins.trailing - 16.0
+                    )
+                ])
             }
         }
     }
