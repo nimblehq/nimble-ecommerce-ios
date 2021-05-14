@@ -1,5 +1,5 @@
 //
-//  MyCartView.swift
+//  ProfileScreen.swift
 //  ecommerce-ios
 //
 //  Created by Su T. Nguyen on 10/05/2021.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct MyCartView: View {
+struct ProfileScreen: View {
 
     var body: some View {
-        Text("My Cart")
+        Text("Profile")
     }
 }
 
-struct MyCartView_Previews: PreviewProvider {
+struct ProfileScreen_Previews: PreviewProvider {
 
     static var previews: some View {
-        MyCartView()
+        ProfileScreen()
     }
 }

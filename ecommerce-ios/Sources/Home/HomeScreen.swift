@@ -1,5 +1,5 @@
 //
-//  ProfileView.swift
+//  HomeScreen.swift
 //  ecommerce-ios
 //
 //  Created by Su T. Nguyen on 10/05/2021.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct HomeScreen: View {
 
     var body: some View {
-        Text("Profile")
+        Text("Home")
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct HomeScreen_Previews: PreviewProvider {
 
     static var previews: some View {
-        ProfileView()
+        HomeScreen()
     }
 }

@@ -13,13 +13,13 @@ struct TabbarView: View {
 
     var body: some View {
         TabView(selection: $selection) {
-            HomeView()
+            HomeScreen()
                 .withTabbar($selection, tab: .home)
-            SearchView()
+            SearchScreen()
                 .withTabbar($selection, tab: .search)
-            MyCartView()
+            MyCartScreen()
                 .withTabbar($selection, tab: .myCart)
-            ProfileView()
+            ProfileScreen()
                 .withTabbar($selection, tab: .profile)
         }
         .accentColor(.mainBlue)
