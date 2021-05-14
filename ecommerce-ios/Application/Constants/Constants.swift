@@ -15,20 +15,18 @@ extension Constants {
         case home, search, myCart, profile
 
         var highlightedImage: Image {
-            switch self {
-            case .home: return Image("tabbar/home-fill")
-            case .search: return Image("tabbar/search-fill")
-            case .myCart: return Image("tabbar/cart-fill")
-            case .profile: return Image("tabbar/profile-fill")
-            }
+            Image("tabbar/\(name)-fill")
+        }
+        var image: Image {
+            Image("tabbar/\(name)")
         }
 
-        var image: Image {
+        var name: String {
             switch self {
-            case .home: return Image("tabbar/home")
-            case .search: return Image("tabbar/search")
-            case .myCart: return Image("tabbar/cart")
-            case .profile: return Image("tabbar/profile")
+            case .home: return "home"
+            case .search: return "search"
+            case .myCart: return "cart"
+            case .profile: return "profile"
             }
         }
 
