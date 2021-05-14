@@ -10,7 +10,8 @@ import SwiftUI
 public extension View {
 
     func navigationBarLargeTitleItems<T>(trailing: T) -> some View where T: View {
-        overlay(NavigationBarLargeTitleItems(trailing: trailing).frame(width: 0, height: 0))
+        overlay(NavigationBarLargeTitleItems(trailing: trailing)
+                    .frame(width: 0, height: 0))
     }
 }
 
@@ -28,10 +29,10 @@ private struct NavigationBarLargeTitleItems<T: View>: UIViewControllerRepresenta
         Wrapper(representable: self)
     }
 
-    func updateUIViewController(_ uiViewController: Wrapper, context: Context) {
-    }
+    func updateUIViewController(_ uiViewController: Wrapper, context: Context) { }
 
     class Wrapper: UIViewController {
+
         private let representable: NavigationBarLargeTitleItems?
 
         init(representable: NavigationBarLargeTitleItems) {
@@ -47,11 +48,11 @@ private struct NavigationBarLargeTitleItems<T: View>: UIViewControllerRepresenta
         override func viewWillAppear(_ animated: Bool) {
             guard let representable = self.representable else { return }
             guard let navigationBar = self.navigationController?.navigationBar else { return }
-            guard let UINavigationBarLargeTitleView = NSClassFromString("_UINavigationBarLargeTitleView")
+            guard let navigationBarLargeTitleView = NSClassFromString("_UINavigationBarLargeTitleView")
             else { return }
 
             navigationBar.subviews.forEach { subview in
-                if subview.isKind(of: UINavigationBarLargeTitleView.self) {
+                if subview.isKind(of: navigationBarLargeTitleView.self) {
                     let controller = UIHostingController(rootView: representable.trailingItems)
                     controller.view.translatesAutoresizingMaskIntoConstraints = false
                     subview.addSubview(controller.view)
