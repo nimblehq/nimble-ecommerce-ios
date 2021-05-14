@@ -1,6 +1,6 @@
 //
 //  SmallWidgetView.swift
-//  ecommerce-widgetExtension
+//  ecommerce-iosWidget
 //
 //  Created by Bliss on 6/5/21.
 //

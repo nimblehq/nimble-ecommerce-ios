@@ -46,6 +46,8 @@ struct EcommerceiOSWidgetEntryView: View {
         switch family {
         case .systemSmall:
             SmallWidgetView()
+        case .systemLarge:
+            LargeWidgetView()
         default:
             Text(entry.date, style: .time)
         }
