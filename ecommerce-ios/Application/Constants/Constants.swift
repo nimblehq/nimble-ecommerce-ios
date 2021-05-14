@@ -30,6 +30,15 @@ extension Constants {
             }
         }
 
+        var title: String {
+            switch self {
+            case .home: return "Discover"
+            case .search: return "Shop"
+            case .myCart: return "My Cart"
+            case .profile: return "My Account"
+            }
+        }
+
         var tag: Int { self.rawValue }
     }
 }

@@ -9,15 +9,17 @@ import SwiftUI
 
 struct HomeScreen: View {
 
+    private var tab: Constants.TabBar = .home
+
     var body: some View {
         NavigationView {
             Text("Home")
-            .navigationBarTitle("Discover")
-            .navigationBarLargeTitleItems(trailing: Button(action: {
-                print("did tap profile button")
-            }) {
-                Image("avatar-icon")
-            })
+                .navigationBarTitle(tab.title)
+                .navigationBarLargeTitleItems(trailing: Button(action: {
+                    print("did tap profile button")
+                }) {
+                    Image("avatar-icon")
+                })
         }
     }
 }
