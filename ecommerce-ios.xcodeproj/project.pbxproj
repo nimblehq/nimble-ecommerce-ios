@@ -435,6 +435,17 @@
 			path = "View+NavigationBar";
 			sourceTree = "<group>";
 		};
+		09A70306265371FC00B8BDE6 /* WidgetView */ = {
+			isa = PBXGroup;
+			children = (
+				09A70307265371FC00B8BDE6 /* ItemView.swift */,
+				09A70308265371FC00B8BDE6 /* LargeWidgetView.swift */,
+				09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */,
+				09A7030A265371FC00B8BDE6 /* ItemsGridView.swift */,
+			);
+			path = WidgetView;
+			sourceTree = "<group>";
+		};
 		4220241DC8323604A6DA927B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
