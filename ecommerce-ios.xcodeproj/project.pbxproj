@@ -19,7 +19,6 @@
 		224CB006264C3F7A0084B50B /* ScreenSize+Ultility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB005264C3F7A0084B50B /* ScreenSize+Ultility.swift */; };
 		224CB00E264C53A40084B50B /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB00D264C53A40084B50B /* Array+Safe.swift */; };
 		224CB019264CE6910084B50B /* Color+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB018264CE6910084B50B /* Color+Application.swift */; };
-		224CB022264CEB190084B50B /* UIColor+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB021264CEB190084B50B /* UIColor+Application.swift */; };
 		2282E9BE265230FF00340FEE /* CustomNavigationBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E9BC265230FF00340FEE /* CustomNavigationBarContentView.swift */; };
 		2282E9C72652320500340FEE /* View+CustomNavigationBarLargeTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E9C62652320500340FEE /* View+CustomNavigationBarLargeTitle.swift */; };
 		2282E9CC2652324B00340FEE /* CustomNavigationBarLargeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282E9CB2652324B00340FEE /* CustomNavigationBarLargeTitleView.swift */; };
@@ -100,7 +99,6 @@
 		224CB005264C3F7A0084B50B /* ScreenSize+Ultility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenSize+Ultility.swift"; sourceTree = "<group>"; };
 		224CB00D264C53A40084B50B /* Array+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Safe.swift"; sourceTree = "<group>"; };
 		224CB018264CE6910084B50B /* Color+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Application.swift"; sourceTree = "<group>"; };
-		224CB021264CEB190084B50B /* UIColor+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Application.swift"; sourceTree = "<group>"; };
 		224CB02B264CED500084B50B /* SearchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemCell.swift; sourceTree = "<group>"; };
 		224CB030264CED800084B50B /* SearchItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemCellViewModel.swift; sourceTree = "<group>"; };
 		224CB039264CEEC00084B50B /* SearchItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemRow.swift; sourceTree = "<group>"; };
@@ -235,15 +233,6 @@
 			path = Collection;
 			sourceTree = "<group>";
 		};
-		224CB027264CEC300084B50B /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				224CB018264CE6910084B50B /* Color+Application.swift */,
-				224CB021264CEB190084B50B /* UIColor+Application.swift */,
-			);
-			path = Color;
-			sourceTree = "<group>";
-		};
 		2282E9B7265230D900340FEE /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,10 +335,10 @@
 		909562AF2643F2FC0028E442 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				224CB018264CE6910084B50B /* Color+Application.swift */,
 				909562B02643F3150028E442 /* View+Hidden.swift */,
 				90248439264D2320008ECEE5 /* View+TabbarItem.swift */,
 				224CB026264CEB530084B50B /* Collection */,
-				224CB027264CEC300084B50B /* Color */,
 				22E67F73265248B900302C38 /* View+NavigationBar */,
 			);
 			path = Extensions;
@@ -855,7 +844,6 @@
 				90248438264D16D0008ECEE5 /* View+NavigationBar.swift in Sources */,
 				909562A32643EC950028E442 /* R.generated.swift in Sources */,
 				2282E9C72652320500340FEE /* View+CustomNavigationBarLargeTitle.swift in Sources */,
-				224CB022264CEB190084B50B /* UIColor+Application.swift in Sources */,
 				2282E9BE265230FF00340FEE /* CustomNavigationBarContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
