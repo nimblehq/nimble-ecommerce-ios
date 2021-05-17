@@ -292,6 +292,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		22E67F73265248B900302C38 /* View+NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				2282E9C62652320500340FEE /* View+CustomNavigationBarLargeTitle.swift */,
+				90248437264D16D0008ECEE5 /* View+NavigationBar.swift */,
+			);
+			path = "View+NavigationBar";
+			sourceTree = "<group>";
+		};
 		4220241DC8323604A6DA927B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,12 +346,11 @@
 		909562AF2643F2FC0028E442 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2282E9C62652320500340FEE /* View+CustomNavigationBarLargeTitle.swift */,
 				909562B02643F3150028E442 /* View+Hidden.swift */,
 				90248439264D2320008ECEE5 /* View+TabbarItem.swift */,
-				90248437264D16D0008ECEE5 /* View+NavigationBar.swift */,
 				224CB026264CEB530084B50B /* Collection */,
 				224CB027264CEC300084B50B /* Color */,
+				22E67F73265248B900302C38 /* View+NavigationBar */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -845,7 +853,6 @@
 				90F6BD9A2642B13500419FE2 /* EcommerceApp.swift in Sources */,
 				9024843A264D2320008ECEE5 /* View+TabbarItem.swift in Sources */,
 				90248438264D16D0008ECEE5 /* View+NavigationBar.swift in Sources */,
-				90D09636264A1DAC00717D05 /* Color+Application.swift in Sources */,
 				909562A32643EC950028E442 /* R.generated.swift in Sources */,
 				2282E9C72652320500340FEE /* View+CustomNavigationBarLargeTitle.swift in Sources */,
 				224CB022264CEB190084B50B /* UIColor+Application.swift in Sources */,

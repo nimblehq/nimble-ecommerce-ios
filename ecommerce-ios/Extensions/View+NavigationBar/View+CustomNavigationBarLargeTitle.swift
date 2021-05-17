@@ -9,8 +9,8 @@ import SwiftUI
 
 public extension View {
 
-    func navigationBarLargeTitle<Content>(customView: Content) -> some View where Content: View {
-        overlay(NavigationBarLargeTiltleRepresenting(customView: customView).frame(width: 0, height: 0))
+    func navigationBarLargeTitle<Content>(@ViewBuilder customView: () -> Content) -> some View where Content: View {
+        overlay(NavigationBarLargeTiltleRepresenting(customView: customView()).frame(width: 100, height: 100))
     }
 }
 
@@ -36,6 +36,7 @@ extension NavigationBarLargeTiltleRepresenting {
     class Wrapper: UIViewController {
 
         private let representable: NavigationBarLargeTiltleRepresenting
+        private var largeTitleView: UIView?
 
         init(representable: NavigationBarLargeTiltleRepresenting) {
             self.representable = representable
@@ -47,6 +48,7 @@ extension NavigationBarLargeTiltleRepresenting {
         }
 
         override func viewWillAppear(_ animated: Bool) {
+            guard largeTitleView == nil else { return }
             guard
                 let navigationBar = navigationController?.navigationBar,
                 let LargeTitleViewClass = NSClassFromString("_UINavigationBarLargeTitleView"),
@@ -62,6 +64,8 @@ extension NavigationBarLargeTiltleRepresenting {
                 controller.view.bottomAnchor.constraint(equalTo: largeTitleView.bottomAnchor),
                 controller.view.heightAnchor.constraint(equalTo: largeTitleView.heightAnchor)
             ])
+            self.largeTitleView = controller.view
+            view.layoutSubviews()
             super.viewWillAppear(animated)
         }
     }

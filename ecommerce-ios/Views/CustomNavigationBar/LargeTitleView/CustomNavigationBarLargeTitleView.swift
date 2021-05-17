@@ -21,10 +21,14 @@ struct CustomNavigationBarLargeTitleView<TitleView, TrailingView>: View where Ti
     }
 
     var body: some View {
-        HStack(alignment: .center) {
-            titleView().padding()
+        VStack {
             Spacer()
-            trailingView().padding()
+            HStack(alignment: .center) {
+                titleView().padding()
+                Spacer()
+                trailingView().padding()
+            }
         }
+        .background(Color.white)
     }
 }
