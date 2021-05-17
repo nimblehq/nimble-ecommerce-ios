@@ -19,7 +19,7 @@ struct SuggestedView: View {
         ZStack {
             Color.darkBlue
                 .ignoresSafeArea(edges: .top)
-                .frame(width: .infinity, height: 386.0)
+                .frame(height: 386.0)
 
             Image("product-cube")
                 .offset(x: 45.0, y: 45.0)
@@ -38,16 +38,30 @@ struct SuggestedView: View {
                 Spacer()
                     .foregroundColor(.white)
                 Rectangle()
-                    .size(width: .infinity, height: 1)
+                    .frame(height: 1)
                     .foregroundColor(.white)
                     .padding([.leading, .trailing], 15.0)
 
-                Text("\(product.name)")
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("\(product.name)")
+                            .foregroundColor(.white)
+                            .padding(.leading, 15.0)
+                        Text("From ฿\(product.price.amount)")
+                            .padding([.bottom, .leading], 15.0)
+                            .foregroundColor(.white)
+                    }
+
+                    Spacer()
+                    Button("SHOP") {
+                        print("Did tap shop button")
+                    }
+                    .frame(width: 74.0, height: 30.0)
                     .foregroundColor(.white)
-                    .padding(.leading, 15.0)
-                Text("From ฿\(product.price.amount)")
-                    .padding([.bottom, .leading], 15.0)
-                    .foregroundColor(.white)
+                    .background(Color.purpleBlue)
+                    .cornerRadius(17.0)
+                }
+                .padding(.trailing, 15.0)
             }
             .alignmentGuide(.leading) { d in d[.trailing] }
         }
