@@ -13,7 +13,8 @@ struct SuggestedView: View {
         id: "product1",
         name: "Poly Cube 2021",
         imageName: "",
-        price: Price(id: "price1", amount: 8_000, currency: "THB"))
+        price: Price(id: "price1", amount: 8_000, currency: "THB")
+    )
 
     var body: some View {
         ZStack {

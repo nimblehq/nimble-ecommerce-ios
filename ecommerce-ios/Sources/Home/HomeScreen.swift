@@ -18,7 +18,7 @@ struct HomeScreen: View {
                     SuggestedView()
                         .cornerRadius(12.0)
                         .offset(x: 0.0, y: 20.0)
-                        .padding([.leading, .trailing], 10.0)
+                        .padding([.horizontal], 10.0)
                 }
             }
             .navigationBarTitle(tab.title)
