@@ -17,50 +17,69 @@ struct SuggestedView: View {
 
     var body: some View {
         ZStack {
+            backgroundView
+            contentView
+        }
+    }
+
+    private var backgroundView: some View {
+        ZStack {
             Color.darkBlue
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 386.0)
 
             Image("product-cube")
                 .offset(x: 45.0, y: 45.0)
-
-            VStack(alignment: .leading) {
-                Text("SUGGESTED FOR YOU")
-                    .foregroundColor(.gray)
-                Text("\(product.name) Collection")
-                    .multilineTextAlignment(.leading)
-                    .padding(.top, 4.0)
-                    .foregroundColor(.white)
-                    .font(.largeTitle.bold())
-
-                Spacer()
-                    .foregroundColor(.white)
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(.white)
-                    .opacity(0.2)
-
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("\(product.name)")
-                            .foregroundColor(.white)
-                        Text("From ฿\(product.price.amount)")
-                            .foregroundColor(.white)
-                    }
-
-                    Spacer()
-                    Button("SHOP") {
-                        print("Did tap shop button")
-                    }
-                    .frame(width: 74.0, height: 30.0)
-                    .foregroundColor(.white)
-                    .background(Color.purpleBlue)
-                    .cornerRadius(17.0)
-                }
-                .padding(.top, 10.0)
-            }
-            .padding(.all, 15.0)
         }
+    }
+
+    private var contentView: some View {
+        VStack(alignment: .leading) {
+            headerView
+
+            Spacer()
+                .foregroundColor(.white)
+            Rectangle()
+                .frame(height: 1)
+                .foregroundColor(.white)
+                .opacity(0.2)
+
+            footerView
+        }
+        .padding(.all, 15.0)
+    }
+
+    private var headerView: some View {
+        VStack(alignment: .leading) {
+            Text("SUGGESTED FOR YOU")
+                .foregroundColor(.gray)
+            Text("\(product.name) Collection")
+                .multilineTextAlignment(.leading)
+                .padding(.top, 4.0)
+                .foregroundColor(.white)
+                .font(.largeTitle.bold())
+        }
+    }
+
+    private var footerView: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text("\(product.name)")
+                    .foregroundColor(.white)
+                Text("From ฿\(product.price.amount)")
+                    .foregroundColor(.white)
+            }
+
+            Spacer()
+            Button("SHOP") {
+                print("Did tap shop button")
+            }
+            .frame(width: 74.0, height: 30.0)
+            .foregroundColor(.white)
+            .background(Color.purpleBlue)
+            .cornerRadius(17.0)
+        }
+        .padding(.top, 10.0)
     }
 }
 
