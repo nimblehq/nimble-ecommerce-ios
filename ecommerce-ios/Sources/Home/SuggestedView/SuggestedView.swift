@@ -20,6 +20,7 @@ struct SuggestedView: View {
             backgroundView
             contentView
         }
+        .clipped()
     }
 
     private var backgroundView: some View {
