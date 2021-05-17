@@ -16,8 +16,6 @@ extension Color {
 
     /// 0x201547
     static let darkBlue: Color = .init(hex: 0x201547)
-    /// 0x534ACC
-    static let purpleBlue: Color = .init(hex: 0x534ACC)
 
     /// 0x534ACC
     static let purpleBlue: Color = .init(hex: 0x534ACC)
