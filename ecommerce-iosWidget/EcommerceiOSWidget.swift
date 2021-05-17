@@ -1,5 +1,5 @@
 //
-//  ecommerceiOSWidget.swift
+//  EcommerceiOSWidget.swift
 //  ecommerce-iosWidget
 //
 //  Created by Bliss on 17/5/21.

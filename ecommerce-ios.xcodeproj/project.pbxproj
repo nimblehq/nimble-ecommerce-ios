@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		09A702F3265254B500B8BDE6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A702F2265254B500B8BDE6 /* WidgetKit.framework */; };
 		09A702F5265254B500B8BDE6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A702F4265254B500B8BDE6 /* SwiftUI.framework */; };
-		09A702F8265254B500B8BDE6 /* ecommerceiOSWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F7265254B500B8BDE6 /* ecommerceiOSWidget.swift */; };
+		09A702F8265254B500B8BDE6 /* EcommerceiOSWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F7265254B500B8BDE6 /* EcommerceiOSWidget.swift */; };
 		09A702FB265254BD00B8BDE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A702FA265254BD00B8BDE6 /* Assets.xcassets */; };
-		09A702FD265254BD00B8BDE6 /* ecommerceiOSWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F9265254B500B8BDE6 /* ecommerceiOSWidget.intentdefinition */; };
-		09A702FE265254BD00B8BDE6 /* ecommerceiOSWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F9265254B500B8BDE6 /* ecommerceiOSWidget.intentdefinition */; };
+		09A702FD265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */; };
+		09A702FE265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */; };
 		09A70301265254BD00B8BDE6 /* ecommerce-iosWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09A702F1265254B500B8BDE6 /* ecommerce-iosWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6467343FA56259DB3EDB535D /* Pods_ecommerce_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D984921251D777A83D13F4C /* Pods_ecommerce_iosTests.framework */; };
 		68875C670E9C0BAA948075CD /* Pods_ecommerce_ios_ecommerce_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0FAF7BF83FE643955750F /* Pods_ecommerce_ios_ecommerce_iosUITests.framework */; };
@@ -81,8 +81,8 @@
 		09A702F1265254B500B8BDE6 /* ecommerce-iosWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ecommerce-iosWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A702F2265254B500B8BDE6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		09A702F4265254B500B8BDE6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		09A702F7265254B500B8BDE6 /* ecommerceiOSWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecommerceiOSWidget.swift; sourceTree = "<group>"; };
-		09A702F9265254B500B8BDE6 /* ecommerceiOSWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ecommerceiOSWidget.intentdefinition; sourceTree = "<group>"; };
+		09A702F7265254B500B8BDE6 /* EcommerceiOSWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceiOSWidget.swift; sourceTree = "<group>"; };
+		09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = EcommerceiOSWidget.intentdefinition; sourceTree = "<group>"; };
 		09A702FA265254BD00B8BDE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A702FC265254BD00B8BDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		281BE23A4441B9EDB3717DCA /* Pods-ecommerce-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ecommerce-ios.release.xcconfig"; path = "Target Support Files/Pods-ecommerce-ios/Pods-ecommerce-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 		09A702F6265254B500B8BDE6 /* ecommerce-iosWidget */ = {
 			isa = PBXGroup;
 			children = (
-				09A702F7265254B500B8BDE6 /* ecommerceiOSWidget.swift */,
-				09A702F9265254B500B8BDE6 /* ecommerceiOSWidget.intentdefinition */,
+				09A702F7265254B500B8BDE6 /* EcommerceiOSWidget.swift */,
+				09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */,
 				09A702FA265254BD00B8BDE6 /* Assets.xcassets */,
 				09A702FC265254BD00B8BDE6 /* Info.plist */,
 			);
@@ -681,8 +681,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A702F8265254B500B8BDE6 /* ecommerceiOSWidget.swift in Sources */,
-				09A702FD265254BD00B8BDE6 /* ecommerceiOSWidget.intentdefinition in Sources */,
+				09A702F8265254B500B8BDE6 /* EcommerceiOSWidget.swift in Sources */,
+				09A702FD265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +693,7 @@
 				90D09626264938DE00717D05 /* TabbarView.swift in Sources */,
 				90D0962926493A5100717D05 /* HomeScreen.swift in Sources */,
 				90D0963426493AE100717D05 /* ProfileScreen.swift in Sources */,
-				09A702FE265254BD00B8BDE6 /* ecommerceiOSWidget.intentdefinition in Sources */,
+				09A702FE265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */,
 				909562B12643F3150028E442 /* View+Hidden.swift in Sources */,
 				90F6BD9C2642B13500419FE2 /* ContentView.swift in Sources */,
 				90D0962E26493AA400717D05 /* SearchScreen.swift in Sources */,
