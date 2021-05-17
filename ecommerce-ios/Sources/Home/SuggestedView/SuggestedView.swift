@@ -26,12 +26,10 @@ struct SuggestedView: View {
 
             VStack(alignment: .leading) {
                 Text("SUGGESTED FOR YOU")
-                    .padding([.top, .leading], 15.0)
                     .foregroundColor(.gray)
                 Text("\(product.name) Collection")
                     .multilineTextAlignment(.leading)
                     .padding(.top, 4.0)
-                    .padding(.leading, 15.0)
                     .foregroundColor(.white)
                     .font(.largeTitle.bold())
 
@@ -40,15 +38,13 @@ struct SuggestedView: View {
                 Rectangle()
                     .frame(height: 1)
                     .foregroundColor(.white)
-                    .padding([.leading, .trailing], 15.0)
+                    .opacity(0.2)
 
                 HStack {
                     VStack(alignment: .leading) {
                         Text("\(product.name)")
                             .foregroundColor(.white)
-                            .padding(.leading, 15.0)
                         Text("From ฿\(product.price.amount)")
-                            .padding([.bottom, .leading], 15.0)
                             .foregroundColor(.white)
                     }
 
@@ -61,9 +57,9 @@ struct SuggestedView: View {
                     .background(Color.purpleBlue)
                     .cornerRadius(17.0)
                 }
-                .padding(.trailing, 15.0)
+                .padding(.top, 10.0)
             }
-            .alignmentGuide(.leading) { d in d[.trailing] }
+            .padding(.all, 15.0)
         }
     }
 }
