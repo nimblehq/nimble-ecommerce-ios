@@ -29,6 +29,9 @@
 		90248438264D16D0008ECEE5 /* View+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248437264D16D0008ECEE5 /* View+NavigationBar.swift */; };
 		9024843A264D2320008ECEE5 /* View+TabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248439264D2320008ECEE5 /* View+TabbarItem.swift */; };
 		9024843D264D2527008ECEE5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9024843C264D2527008ECEE5 /* Constants.swift */; };
+		90248438264D16D0008ECEE5 /* View+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248437264D16D0008ECEE5 /* View+NavigationBar.swift */; };
+		90248445264E6424008ECEE5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248444264E6424008ECEE5 /* Product.swift */; };
+		90248447264E6554008ECEE5 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248446264E6554008ECEE5 /* Price.swift */; };
 		909562A32643EC950028E442 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909562A22643EC950028E442 /* R.generated.swift */; };
 		909562A82643ED040028E442 /* R.typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909562A72643ED040028E442 /* R.typealiases.swift */; };
 		909562B12643F3150028E442 /* View+Hidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909562B02643F3150028E442 /* View+Hidden.swift */; };
@@ -118,6 +121,9 @@
 		90248437264D16D0008ECEE5 /* View+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationBar.swift"; sourceTree = "<group>"; };
 		90248439264D2320008ECEE5 /* View+TabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+TabbarItem.swift"; sourceTree = "<group>"; };
 		9024843C264D2527008ECEE5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		90248437264D16D0008ECEE5 /* View+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationBar.swift"; sourceTree = "<group>"; };
+		90248444264E6424008ECEE5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		90248446264E6554008ECEE5 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		909562A22643EC950028E442 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		909562A72643ED040028E442 /* R.typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.typealiases.swift; sourceTree = "<group>"; };
 		909562B02643F3150028E442 /* View+Hidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Hidden.swift"; sourceTree = "<group>"; };
@@ -221,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				224CAFFC264C3D870084B50B /* ItemType.swift */,
+                90248446264E6554008ECEE5 /* Price.swift */,
+                90248444264E6424008ECEE5 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -825,11 +833,13 @@
 				90D0963426493AE100717D05 /* ProfileScreen.swift in Sources */,
 				09A702FE265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */,
 				909562B12643F3150028E442 /* View+Hidden.swift in Sources */,
+				90248447264E6554008ECEE5 /* Price.swift in Sources */,
 				90F6BD9C2642B13500419FE2 /* ContentView.swift in Sources */,
 				2282E9DF2652347100340FEE /* SearchItemCellViewModel.swift in Sources */,
 				90D0962E26493AA400717D05 /* SearchScreen.swift in Sources */,
 				909562A82643ED040028E442 /* R.typealiases.swift in Sources */,
 				9024843D264D2527008ECEE5 /* Constants.swift in Sources */,
+				90248445264E6424008ECEE5 /* Product.swift in Sources */,
 				90D0963126493AC500717D05 /* MyCartScreen.swift in Sources */,
 				2282E9CC2652324B00340FEE /* CustomNavigationBarLargeTitleView.swift in Sources */,
 				224CAFFD264C3D870084B50B /* ItemType.swift in Sources */,

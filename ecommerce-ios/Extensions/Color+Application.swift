@@ -14,6 +14,9 @@ extension Color {
     /// 0x534ACC
     static let mainBlue: Color = .init(hex: 0x534ACC)
 
+    /// 0x201547
+    static let darkBlue: Color = .init(hex: 0x201547)
+
     // MARK: - Gray
 
     /// #292A33 Gray 900
