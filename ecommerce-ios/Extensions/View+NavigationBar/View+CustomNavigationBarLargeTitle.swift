@@ -10,7 +10,7 @@ import SwiftUI
 public extension View {
 
     func navigationBarLargeTitle<Content>(@ViewBuilder customView: () -> Content) -> some View where Content: View {
-        overlay(NavigationBarLargeTiltleRepresenting(customView: customView()).frame(width: 100, height: 100))
+        overlay(NavigationBarLargeTiltleRepresenting(customView: customView()))
     }
 }
 
@@ -52,7 +52,7 @@ extension NavigationBarLargeTiltleRepresenting {
             guard
                 let navigationBar = navigationController?.navigationBar,
                 let LargeTitleViewClass = NSClassFromString("_UINavigationBarLargeTitleView"),
-                let largeTitleView = navigationBar.subviews.first(where: { $0.isKind(of:  LargeTitleViewClass.self) })
+                let largeTitleView = navigationBar.subviews.first(where: { $0.isKind(of: LargeTitleViewClass.self) })
             else { return }
             let controller = UIHostingController(rootView: representable.customView)
             controller.view.clipsToBounds = true

@@ -9,7 +9,5 @@ import UIKit
 import SwiftUI
 
 var screenWidth: CGFloat {
-    return UIScreen.main.bounds.width
+    UIScreen.main.bounds.width
 }
-
-var navigationBarHeight: CGFloat = 70.0

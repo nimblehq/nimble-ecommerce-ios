@@ -18,7 +18,8 @@ struct HomeScreen: View {
                 .navigationBarLargeTitle {
                     CustomNavigationBarLargeTitleView(
                         titleView: {
-                            Text(tab.title).font(.largeTitle).fontWeight(.bold)
+                            Text(tab.title)
+                                .font(.largeTitle.weight(.bold))
                         },
                         trailingView: {
                             Button(
