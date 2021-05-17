@@ -399,6 +399,7 @@
 				90F6BDA22642B13900419FE2 /* Info.plist */,
 				90D096212649211800717D05 /* LaunchScreen.storyboard */,
 				9024843B264D2515008ECEE5 /* Constants */,
+				90F6BD9F2642B13900419FE2 /* Preview Content */,
 				90D9071F2643DD8000D37F16 /* Resources */,
 			);
 			path = Application;
@@ -468,7 +469,7 @@
 				909562AF2643F2FC0028E442 /* Extensions */,
 				224CB004264C3F5C0084B50B /* Helpers */,
 				224CB017264CE65E0084B50B /* Models */,
-				90F6BD9F2642B13900419FE2 /* Preview Content */,
+				90D907202643DD9400D37F16 /* Sources */,
 				90D096232649316B00717D05 /* Views */,
 				90D907202643DD9400D37F16 /* Sources */,
 			);
@@ -1051,7 +1052,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ecommerce-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ecommerce-ios/Application/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "ecommerce-ios/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1074,7 +1075,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ecommerce-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ecommerce-ios/Application/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "ecommerce-ios/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
