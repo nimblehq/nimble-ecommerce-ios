@@ -1,5 +1,5 @@
 //
-//  NavigationBarMiddleTitle.swift
+//  CustomNavigationBarContentView.swift
 //  ecommerce-ios
 //
 //  Created by Nguyen M. Tam on 13/05/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationBarMiddleTitle<LeadingView, ContentView, TrailingView>: View
+struct CustomNavigationBarContentView<LeadingView, ContentView, TrailingView>: View
 where LeadingView: View, ContentView: View, TrailingView: View {
 
     let leadingView: LeadingView?
@@ -25,10 +25,10 @@ where LeadingView: View, ContentView: View, TrailingView: View {
     }
 }
 
-struct NavigationBarMiddleTitle_Previews: PreviewProvider {
+struct CustomNavigationBarContentView_Previews: PreviewProvider {
 
     static var previews: some View {
-        NavigationBarMiddleTitle(
+        CustomNavigationBarContentView(
             leadingView: Button("Back", action: { }).font(.footnote),
             contentView: Text("Some title").font(.title),
             trailingView: Button("Cancel", action: { }).font(.footnote)

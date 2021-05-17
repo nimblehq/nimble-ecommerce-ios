@@ -36,18 +36,19 @@ struct SearchItemRow_Previews: PreviewProvider {
                 viewModels: [
                     SearchItemCellViewModel(
                         id: 0,
-                        name: "cube",
-                        imageName: "icon-cube",
+                        name: ItemType.cube.rawValue,
+                        imageName: ItemType.cube.imageName,
                         numberOfItems: 0
                     ),
                     SearchItemCellViewModel(
                         id: 1,
-                        name: "sphere",
-                        imageName: "icon-sphere",
+                        name: ItemType.sphere.rawValue,
+                        imageName: ItemType.sphere.imageName,
                         numberOfItems: 1
                     )
                 ]
             )
-        ).fixedSize(horizontal: true, vertical: true)
+        )
+        .fixedSize(horizontal: true, vertical: true)
     }
 }

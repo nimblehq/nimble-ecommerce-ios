@@ -37,6 +37,7 @@ struct SearchItemCell_Previews: PreviewProvider {
                 imageName: "icon-cube",
                 numberOfItems: 1
             )
-        ).fixedSize(horizontal: true, vertical: true)
+        )
+        .fixedSize(horizontal: true, vertical: true)
     }
 }

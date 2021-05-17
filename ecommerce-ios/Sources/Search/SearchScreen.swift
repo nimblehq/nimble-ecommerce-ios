@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SearchScreen: View {
 
-    let cellVMs: [SearchItemCellViewModel] = {
+    private let numberOfColumns = 2
+    private let spacing: CGFloat = 17.0
+    private let cellVỉewModels: [SearchItemCellViewModel] = {
         var vms: [SearchItemCellViewModel] = []
         for (index, itemType) in ItemType.allCases.enumerated() {
             vms.append(
@@ -24,36 +26,23 @@ struct SearchScreen: View {
         return vms
     }()
 
-    var itemRowModels: [SearchItemRowViewModel] {
-        var itemCellModels: [SearchItemRowViewModel] = []
-        var index = 0
-        while index < cellVMs.count {
-            itemCellModels.append(
-                SearchItemRowViewModel(
-                    id: index,
-                    viewModels: [
-                        cellVMs[safe: index],
-                        cellVMs[safe: index + 1],
-                        cellVMs[safe: index + 2]
-                    ]
-                )
-            )
-            index += SearchItemRow.column
-        }
-        return itemCellModels
+    private var columns: [GridItem] {
+        let numberOfColumns = CGFloat(self.numberOfColumns)
+        let minimunWidth = ((screenWidth - spacing * (numberOfColumns + 1)) / numberOfColumns).rounded(.down)
+        return [.init(.adaptive(minimum: minimunWidth))]
     }
 
     var body: some View {
-        VStack {
-            NavigationBarLeftTitle(
-                contentView: Text("Shop").font(.title).fontWeight(.bold),
-                trailingView: Rectangle().foregroundColor(.white)
-            ).frame(width: screenWidth, height: navigationBarHeight)
-            ScrollView(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/) {
-                ForEach(itemRowModels) { viewModel in
-                    SearchItemRow(viewModel: viewModel)
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: true) {
+                LazyVGrid(columns: columns, spacing: spacing) {
+                    ForEach(cellVỉewModels) { viewModel in
+                        SearchItemCell(viewModel: viewModel)
+                    }
                 }
+                .padding(.horizontal)
             }
+            .navigationBarTitle("List")
         }
     }
 }
