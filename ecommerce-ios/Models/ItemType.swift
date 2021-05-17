@@ -15,6 +15,6 @@ enum ItemType: String, CaseIterable {
     case cone
 
     var imageName: String {
-        return "icon-\(rawValue)"
+        "icon-\(rawValue)"
     }
 }

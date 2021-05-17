@@ -13,22 +13,29 @@ struct HomeScreen: View {
 
     var body: some View {
         NavigationView {
-            Text("Home")
-                .navigationBarTitle(tab.title)
-                .navigationBarLargeTitle {
-                    CustomNavigationBarLargeTitleView(
-                        titleView: {
-                            Text(tab.title)
-                                .font(.largeTitle.weight(.bold))
-                        },
-                        trailingView: {
-                            Button(
-                                action: { print("did tap profile button") },
-                                label: { Image("avatar-icon") }
-                            )
-                        }
-                    )
+            ScrollView {
+                VStack {
+                    SuggestedView()
+                        .cornerRadius(12.0)
+                        .offset(x: 0.0, y: 20.0)
+                        .padding([.leading, .trailing], 10.0)
                 }
+            }
+            .navigationBarTitle(tab.title)
+            .navigationBarLargeTitle {
+                CustomNavigationBarLargeTitleView(
+                    titleView: {
+                        Text(tab.title)
+                            .font(.largeTitle.weight(.bold))
+                    },
+                    trailingView: {
+                        Button(
+                            action: { print("did tap profile button") },
+                            label: { Image("avatar-icon") }
+                        )
+                    }
+                )
+            }
         }
     }
 }

@@ -53,4 +53,3 @@ struct SearchScreen_Previews: PreviewProvider {
         SearchScreen()
     }
 }
-
