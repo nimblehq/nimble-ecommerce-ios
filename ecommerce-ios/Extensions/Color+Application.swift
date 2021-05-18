@@ -14,6 +14,11 @@ extension Color {
     /// 0x534ACC
     static let mainBlue: Color = .init(hex: 0x534ACC)
 
+    /// 0x201547
+    static let darkBlue: Color = .init(hex: 0x201547)
+    /// 0x534ACC
+    static let purpleBlue: Color = .init(hex: 0x534ACC)
+
     // MARK: - Gray
 
     /// #292A33 Gray 900
@@ -25,7 +30,7 @@ extension Color {
     /// #DADADA
     static var altoGray: Color { Color(hex: 0xDADADA) }
 
-    // MARK - Violet
+    // MARK: - Violet
 
     /// #534ACC
     static var indigoViolet: Color { Color(hex: 0x534ACC) }

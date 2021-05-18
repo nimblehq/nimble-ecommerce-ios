@@ -13,6 +13,6 @@ struct SearchItemCellViewModel: Identifiable {
     let numberOfItems: Int
 
     var numberOfItemsString: String {
-        return "\(numberOfItems) \(numberOfItems == 1 ? "item" : "items")"
+        "\(numberOfItems) \(numberOfItems == 1 ? "item" : "items")"
     }
 }
