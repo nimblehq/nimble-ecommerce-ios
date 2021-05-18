@@ -19,6 +19,10 @@
 		222EB87E26525D2B00BF46BD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB87D26525D2B00BF46BD /* SearchBarView.swift */; };
 		222EB886265268BA00BF46BD /* View+CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB885265268BA00BF46BD /* View+CustomOverlayView.swift */; };
 		222EB88E2652723B00BF46BD /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB88D2652723B00BF46BD /* String+Utility.swift */; };
+		222EB8A326527E1B00BF46BD /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB8A226527E1B00BF46BD /* ProductCellViewModel.swift */; };
+		222EB8AB26527EC600BF46BD /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB8AA26527EC600BF46BD /* ProductCell.swift */; };
+		222EB8B02652802700BF46BD /* NumberFormatters+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB8AF2652802700BF46BD /* NumberFormatters+Formatter.swift */; };
+		222EB8BB265280FC00BF46BD /* Double+NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB8BA265280FC00BF46BD /* Double+NumberFormatter.swift */; };
 		224CAFFD264C3D870084B50B /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CAFFC264C3D870084B50B /* ItemType.swift */; };
 		224CB006264C3F7A0084B50B /* ScreenSize+Ultility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB005264C3F7A0084B50B /* ScreenSize+Ultility.swift */; };
 		224CB00E264C53A40084B50B /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB00D264C53A40084B50B /* Array+Safe.swift */; };
@@ -108,6 +112,10 @@
 		222EB87D26525D2B00BF46BD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		222EB885265268BA00BF46BD /* View+CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CustomOverlayView.swift"; sourceTree = "<group>"; };
 		222EB88D2652723B00BF46BD /* String+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
+		222EB8A226527E1B00BF46BD /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
+		222EB8AA26527EC600BF46BD /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		222EB8AF2652802700BF46BD /* NumberFormatters+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatters+Formatter.swift"; sourceTree = "<group>"; };
+		222EB8BA265280FC00BF46BD /* Double+NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+NumberFormatter.swift"; sourceTree = "<group>"; };
 		224CAFF6264C39E20084B50B /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		224CAFFC264C3D870084B50B /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		224CB005264C3F7A0084B50B /* ScreenSize+Ultility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenSize+Ultility.swift"; sourceTree = "<group>"; };
@@ -219,6 +227,15 @@
 				222EB87D26525D2B00BF46BD /* SearchBarView.swift */,
 			);
 			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		222EB8A126527DFE00BF46BD /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				222EB8A226527E1B00BF46BD /* ProductCellViewModel.swift */,
+				222EB8AA26527EC600BF46BD /* ProductCell.swift */,
+			);
+			path = ProductCell;
 			sourceTree = "<group>";
 		};
 		224CB004264C3F5C0084B50B /* Helpers */ = {
@@ -377,6 +394,8 @@
 			children = (
 				224CB018264CE6910084B50B /* Color+Application.swift */,
 				222EB88D2652723B00BF46BD /* String+Utility.swift */,
+				222EB8BA265280FC00BF46BD /* Double+NumberFormatter.swift */,
+				222EB8AF2652802700BF46BD /* NumberFormatters+Formatter.swift */,
 				222EB885265268BA00BF46BD /* View+CustomOverlayView.swift */,
 				9029357F2653C13000C804BF /* View+Hidden.swift */,
 				90248439264D2320008ECEE5 /* View+TabbarItem.swift */,
@@ -390,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				222EB87C26525D0F00BF46BD /* SearchBar */,
+				222EB8A126527DFE00BF46BD /* ProductCell */,
 				2282E9BB265230FF00340FEE /* CustomNavigationBar */,
 			);
 			path = Views;
@@ -866,6 +886,7 @@
 			files = (
 				90D09626264938DE00717D05 /* TabbarView.swift in Sources */,
 				90248442264E63E6008ECEE5 /* SuggestedView.swift in Sources */,
+				222EB8BB265280FC00BF46BD /* Double+NumberFormatter.swift in Sources */,
 				90D0962926493A5100717D05 /* HomeScreen.swift in Sources */,
 				90D0963426493AE100717D05 /* ProfileScreen.swift in Sources */,
 				09A702FE265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */,
@@ -874,6 +895,7 @@
 				90248454265271E1008ECEE5 /* CategoryCollectionView.swift in Sources */,
 				90248452265270ED008ECEE5 /* CategoryView.swift in Sources */,
 				902935822653C2E400C804BF /* R.typealiases.swift in Sources */,
+				222EB8B02652802700BF46BD /* NumberFormatters+Formatter.swift in Sources */,
 				2282E9DF2652347100340FEE /* SearchItemCellViewModel.swift in Sources */,
 				90D0962E26493AA400717D05 /* SearchScreen.swift in Sources */,
 				9024843D264D2527008ECEE5 /* Constants.swift in Sources */,
@@ -882,6 +904,9 @@
 				2282E9CC2652324B00340FEE /* CustomNavigationBarLargeTitleView.swift in Sources */,
 				224CAFFD264C3D870084B50B /* ItemType.swift in Sources */,
 				222EB886265268BA00BF46BD /* View+CustomOverlayView.swift in Sources */,
+				222EB8A326527E1B00BF46BD /* ProductCellViewModel.swift in Sources */,
+				222EB886265268BA00BF46BD /* View+CustomOverlayView.swift in Sources */,
+				222EB8AB26527EC600BF46BD /* ProductCell.swift in Sources */,
 				224CB00E264C53A40084B50B /* Array+Safe.swift in Sources */,
 				222EB88E2652723B00BF46BD /* String+Utility.swift in Sources */,
 				9029357E2653C03900C804BF /* ContentView.swift in Sources */,
