@@ -53,6 +53,9 @@
 		229D55022655597400114B3E /* ColorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D55012655597400114B3E /* ColorCellViewModel.swift */; };
 		229D55042655598500114B3E /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D55032655598500114B3E /* ColorCell.swift */; };
 		229D55062655599B00114B3E /* ColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D55052655599B00114B3E /* ColorSelectionView.swift */; };
+		09A703112653735100B8BDE6 /* LargeWidgetTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A703102653735100B8BDE6 /* LargeWidgetTitleView.swift */; };
+		09A70313265374E100B8BDE6 /* ItemDescritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A70312265374E100B8BDE6 /* ItemDescritionView.swift */; };
+		09A7031526537BE400B8BDE6 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7031426537BE400B8BDE6 /* LogoView.swift */; };
 		6467343FA56259DB3EDB535D /* Pods_ecommerce_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D984921251D777A83D13F4C /* Pods_ecommerce_iosTests.framework */; };
 		68875C670E9C0BAA948075CD /* Pods_ecommerce_ios_ecommerce_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE0FAF7BF83FE643955750F /* Pods_ecommerce_ios_ecommerce_iosUITests.framework */; };
 		9024843A264D2320008ECEE5 /* View+TabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248439264D2320008ECEE5 /* View+TabbarItem.swift */; };
@@ -173,6 +176,9 @@
 		229D55012655597400114B3E /* ColorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellViewModel.swift; sourceTree = "<group>"; };
 		229D55032655598500114B3E /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		229D55052655599B00114B3E /* ColorSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionView.swift; sourceTree = "<group>"; };
+		09A703102653735100B8BDE6 /* LargeWidgetTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetTitleView.swift; sourceTree = "<group>"; };
+		09A70312265374E100B8BDE6 /* ItemDescritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDescritionView.swift; sourceTree = "<group>"; };
+		09A7031426537BE400B8BDE6 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		281BE23A4441B9EDB3717DCA /* Pods-ecommerce-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ecommerce-ios.release.xcconfig"; path = "Target Support Files/Pods-ecommerce-ios/Pods-ecommerce-ios.release.xcconfig"; sourceTree = "<group>"; };
 		3D984921251D777A83D13F4C /* Pods_ecommerce_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommerce_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D8676CF800C031A87683C6E /* Pods_ecommerce_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommerce_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,8 +271,10 @@
 			isa = PBXGroup;
 			children = (
 				09A70307265371FC00B8BDE6 /* ItemView.swift */,
-				09A70308265371FC00B8BDE6 /* LargeWidgetView.swift */,
+				09A7030F2653733E00B8BDE6 /* LargeWidget */,
 				09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */,
+				09A70312265374E100B8BDE6 /* ItemDescritionView.swift */,
+				09A7031426537BE400B8BDE6 /* LogoView.swift */,
 				09A7030A265371FC00B8BDE6 /* ItemsGridView.swift */,
 			);
 			path = WidgetView;
@@ -439,11 +447,19 @@
 			isa = PBXGroup;
 			children = (
 				09A70307265371FC00B8BDE6 /* ItemView.swift */,
-				09A70308265371FC00B8BDE6 /* LargeWidgetView.swift */,
 				09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */,
 				09A7030A265371FC00B8BDE6 /* ItemsGridView.swift */,
 			);
 			path = WidgetView;
+			sourceTree = "<group>";
+		};
+		09A7030F2653733E00B8BDE6 /* LargeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				09A70308265371FC00B8BDE6 /* LargeWidgetView.swift */,
+				09A703102653735100B8BDE6 /* LargeWidgetTitleView.swift */,
+			);
+			path = LargeWidget;
 			sourceTree = "<group>";
 		};
 		4220241DC8323604A6DA927B /* Frameworks */ = {
@@ -1006,6 +1022,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A702F8265254B500B8BDE6 /* EcommerceiOSWidget.swift in Sources */,
+				09A7031526537BE400B8BDE6 /* LogoView.swift in Sources */,
+				09A70313265374E100B8BDE6 /* ItemDescritionView.swift in Sources */,
+				09A703112653735100B8BDE6 /* LargeWidgetTitleView.swift in Sources */,
 				09A7030E265371FC00B8BDE6 /* ItemsGridView.swift in Sources */,
 				09A702FD265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */,
 				09A7030B265371FC00B8BDE6 /* ItemView.swift in Sources */,
