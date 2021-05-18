@@ -13,7 +13,7 @@ struct SuggestedView: View {
         id: "product1",
         name: "Poly Cube 2021",
         imageName: "",
-        price: Price(id: "price1", amount: 8_000, currency: "THB")
+        price: Price(id: "price1", amount: 8_000, currency: "฿")
     )
 
     var body: some View {
@@ -40,15 +40,13 @@ struct SuggestedView: View {
             headerView
 
             Spacer()
-                .foregroundColor(.white)
             Rectangle()
                 .frame(height: 1)
-                .foregroundColor(.white)
-                .opacity(0.2)
+                .foregroundColor(.white.opacity(0.2))
 
             footerView
         }
-        .padding(.all, 15.0)
+        .padding(15.0)
     }
 
     private var headerView: some View {
@@ -70,7 +68,7 @@ struct SuggestedView: View {
                 Text("\(product.name)")
                     .foregroundColor(.white)
                     .font(.system(size: 17).bold())
-                Text("From ฿\(product.price.amount)")
+                Text("From \(product.price.currency)\(product.price.amount)")
                     .foregroundColor(.white)
                     .font(.system(size: 13))
             }
