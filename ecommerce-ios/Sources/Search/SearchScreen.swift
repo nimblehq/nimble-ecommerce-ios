@@ -9,8 +9,11 @@ import SwiftUI
 
 struct SearchScreen: View {
 
+    @State var searchKeyword: String = ""
+
     private let numberOfColumns = 2
     private let spacing: CGFloat = 17.0
+
     private let cellVỉewModels: [SearchItemCellViewModel] = {
         var vms: [SearchItemCellViewModel] = []
         for (index, itemType) in ItemType.allCases.enumerated() {
@@ -26,6 +29,12 @@ struct SearchScreen: View {
         return vms
     }()
 
+    private var searchResultCellViewModels: [SearchItemCellViewModel] {
+        searchKeyword.trimmed.isEmpty ? cellVỉewModels : cellVỉewModels.filter {
+            $0.name.lowercased().contains(searchKeyword.lowercased())
+        }
+    }
+
     private var columns: [GridItem] {
         let numberOfColumns = CGFloat(self.numberOfColumns)
         let minimunWidth = ((screenWidth - spacing * (numberOfColumns + 1)) / numberOfColumns).rounded(.down)
@@ -35,8 +44,9 @@ struct SearchScreen: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: true) {
+                SearchBarView(searchKeyword: $searchKeyword)
                 LazyVGrid(columns: columns, spacing: spacing) {
-                    ForEach(cellVỉewModels) { viewModel in
+                    ForEach(searchResultCellViewModels) { viewModel in
                         SearchItemCell(viewModel: viewModel)
                     }
                 }

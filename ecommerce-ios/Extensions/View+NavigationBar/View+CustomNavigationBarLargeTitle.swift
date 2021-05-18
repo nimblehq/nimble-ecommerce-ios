@@ -10,7 +10,10 @@ import SwiftUI
 public extension View {
 
     func navigationBarLargeTitle<Content>(@ViewBuilder customView: () -> Content) -> some View where Content: View {
-        overlay(NavigationBarLargeTiltleRepresenting(customView: customView()))
+        overlay(
+            NavigationBarLargeTiltleRepresenting(customView: customView())
+                .frame(width: 0.0, height: 0.0)
+        )
     }
 }
 

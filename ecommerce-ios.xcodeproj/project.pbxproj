@@ -16,6 +16,9 @@
 		09A702FD265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */; };
 		09A702FE265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */; };
 		09A70301265254BD00B8BDE6 /* ecommerce-iosWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09A702F1265254B500B8BDE6 /* ecommerce-iosWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		222EB87E26525D2B00BF46BD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB87D26525D2B00BF46BD /* SearchBarView.swift */; };
+		222EB886265268BA00BF46BD /* View+CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB885265268BA00BF46BD /* View+CustomOverlayView.swift */; };
+		222EB88E2652723B00BF46BD /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB88D2652723B00BF46BD /* String+Utility.swift */; };
 		224CAFFD264C3D870084B50B /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CAFFC264C3D870084B50B /* ItemType.swift */; };
 		224CB006264C3F7A0084B50B /* ScreenSize+Ultility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB005264C3F7A0084B50B /* ScreenSize+Ultility.swift */; };
 		224CB00E264C53A40084B50B /* Array+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB00D264C53A40084B50B /* Array+Safe.swift */; };
@@ -99,6 +102,9 @@
 		09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = EcommerceiOSWidget.intentdefinition; sourceTree = "<group>"; };
 		09A702FA265254BD00B8BDE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A702FC265254BD00B8BDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222EB87D26525D2B00BF46BD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		222EB885265268BA00BF46BD /* View+CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CustomOverlayView.swift"; sourceTree = "<group>"; };
+		222EB88D2652723B00BF46BD /* String+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
 		224CAFF6264C39E20084B50B /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		224CAFFC264C3D870084B50B /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		224CB005264C3F7A0084B50B /* ScreenSize+Ultility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenSize+Ultility.swift"; sourceTree = "<group>"; };
@@ -199,6 +205,14 @@
 				094196502643D5AD008C3711 /* ItemView.swift */,
 			);
 			path = "ecommerce-iosWidget";
+			sourceTree = "<group>";
+		};
+		222EB87C26525D0F00BF46BD /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				222EB87D26525D2B00BF46BD /* SearchBarView.swift */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		224CB004264C3F5C0084B50B /* Helpers */ = {
@@ -337,8 +351,10 @@
 			isa = PBXGroup;
 			children = (
 				224CB018264CE6910084B50B /* Color+Application.swift */,
+				222EB88D2652723B00BF46BD /* String+Utility.swift */,
 				909562B02643F3150028E442 /* View+Hidden.swift */,
 				90248439264D2320008ECEE5 /* View+TabbarItem.swift */,
+				222EB885265268BA00BF46BD /* View+CustomOverlayView.swift */,
 				224CB026264CEB530084B50B /* Collection */,
 				22E67F73265248B900302C38 /* View+NavigationBar */,
 			);
@@ -348,6 +364,7 @@
 		90D096232649316B00717D05 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				222EB87C26525D0F00BF46BD /* SearchBar */,
 				2282E9BB265230FF00340FEE /* CustomNavigationBar */,
 			);
 			path = Views;
@@ -839,12 +856,15 @@
 				2282E9CC2652324B00340FEE /* CustomNavigationBarLargeTitleView.swift in Sources */,
 				224CAFFD264C3D870084B50B /* ItemType.swift in Sources */,
 				909562B12643F3150028E442 /* View+Hidden.swift in Sources */,
+				222EB886265268BA00BF46BD /* View+CustomOverlayView.swift in Sources */,
 				90F6BD9C2642B13500419FE2 /* ContentView.swift in Sources */,
 				224CB00E264C53A40084B50B /* Array+Safe.swift in Sources */,
+				222EB88E2652723B00BF46BD /* String+Utility.swift in Sources */,
 				909562A82643ED040028E442 /* R.typealiases.swift in Sources */,
 				224CB006264C3F7A0084B50B /* ScreenSize+Ultility.swift in Sources */,
 				2282E9DE2652347100340FEE /* SearchItemCell.swift in Sources */,
 				224CB019264CE6910084B50B /* Color+Application.swift in Sources */,
+				222EB87E26525D2B00BF46BD /* SearchBarView.swift in Sources */,
 				90F6BD9A2642B13500419FE2 /* EcommerceApp.swift in Sources */,
 				9024843A264D2320008ECEE5 /* View+TabbarItem.swift in Sources */,
 				909562A32643EC950028E442 /* R.generated.swift in Sources */,
