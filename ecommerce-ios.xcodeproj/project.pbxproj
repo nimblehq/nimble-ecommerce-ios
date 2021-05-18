@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094196512643D5AD008C3711 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094196502643D5AD008C3711 /* ItemView.swift */; };
+		094196532643D9E1008C3711 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094196522643D9E1008C3711 /* SmallWidgetView.swift */; };
 		09A702F3265254B500B8BDE6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A702F2265254B500B8BDE6 /* WidgetKit.framework */; };
 		09A702F5265254B500B8BDE6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A702F4265254B500B8BDE6 /* SwiftUI.framework */; };
 		09A702F8265254B500B8BDE6 /* EcommerceiOSWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F7265254B500B8BDE6 /* EcommerceiOSWidget.swift */; };
@@ -88,6 +90,8 @@
 
 /* Begin PBXFileReference section */
 		0578CFAAA271B29A3AEF6C65 /* Pods-ecommerce-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ecommerce-ios.debug.xcconfig"; path = "Target Support Files/Pods-ecommerce-ios/Pods-ecommerce-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		094196502643D5AD008C3711 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		094196522643D9E1008C3711 /* SmallWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
 		09A702F1265254B500B8BDE6 /* ecommerce-iosWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ecommerce-iosWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A702F2265254B500B8BDE6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		09A702F4265254B500B8BDE6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -191,6 +195,8 @@
 				09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */,
 				09A702FA265254BD00B8BDE6 /* Assets.xcassets */,
 				09A702FC265254BD00B8BDE6 /* Info.plist */,
+				094196522643D9E1008C3711 /* SmallWidgetView.swift */,
+				094196502643D5AD008C3711 /* ItemView.swift */,
 			);
 			path = "ecommerce-iosWidget";
 			sourceTree = "<group>";
@@ -807,6 +813,8 @@
 			files = (
 				09A702F8265254B500B8BDE6 /* EcommerceiOSWidget.swift in Sources */,
 				09A702FD265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */,
+				094196532643D9E1008C3711 /* SmallWidgetView.swift in Sources */,
+				094196512643D5AD008C3711 /* ItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
