@@ -15,11 +15,20 @@ struct HomeScreen: View {
         NavigationView {
             Text("Home")
                 .navigationBarTitle(tab.title)
-                .navigationBarLargeTitleItems(trailing: Button(action: {
-                    print("did tap profile button")
-                }) {
-                    Image("avatar-icon")
-                })
+                .navigationBarLargeTitle {
+                    CustomNavigationBarLargeTitleView(
+                        titleView: {
+                            Text(tab.title)
+                                .font(.largeTitle.weight(.bold))
+                        },
+                        trailingView: {
+                            Button(
+                                action: { print("did tap profile button") },
+                                label: { Image("avatar-icon") }
+                            )
+                        }
+                    )
+                }
         }
     }
 }
