@@ -36,7 +36,7 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationIntent
 }
 
-struct ecommerceiOSWidgetEntryView: View {
+struct EcommerceiOSWidgetEntryView: View {
 
     var entry: Provider.Entry
 
@@ -52,7 +52,7 @@ struct EcommerceiOSWidget: Widget {
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            ecommerceiOSWidgetEntryView(entry: entry)
+            EcommerceiOSWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
@@ -62,7 +62,7 @@ struct EcommerceiOSWidget: Widget {
 struct Ecommerce_iosWidget_Previews: PreviewProvider {
 
     static var previews: some View {
-        ecommerceiOSWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        EcommerceiOSWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
