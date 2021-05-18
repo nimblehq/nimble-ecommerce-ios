@@ -34,7 +34,7 @@ extension Color {
     /// #EFEFEF
     static var galleryGray: Color { Color(hex: 0xEFEFEF) }
 
-    // MARK - Violet
+    // MARK: - Violet
 
     /// #534ACC
     static var indigoViolet: Color { Color(hex: 0x534ACC) }
