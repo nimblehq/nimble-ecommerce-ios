@@ -15,8 +15,7 @@ struct LargeWidgetView: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    // TODO: Change gray color when rebase
-                    .fill(Color.gray)
+                    .fill(Color.gray100)
                     .frame(maxWidth: .infinity, maxHeight: 182.0)
             }
             VStack {

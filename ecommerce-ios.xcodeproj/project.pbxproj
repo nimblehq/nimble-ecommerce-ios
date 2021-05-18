@@ -14,6 +14,11 @@
 		09A702FD265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */; };
 		09A702FE265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */; };
 		09A70301265254BD00B8BDE6 /* ecommerce-iosWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09A702F1265254B500B8BDE6 /* ecommerce-iosWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		09A7030B265371FC00B8BDE6 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A70307265371FC00B8BDE6 /* ItemView.swift */; };
+		09A7030C265371FC00B8BDE6 /* LargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A70308265371FC00B8BDE6 /* LargeWidgetView.swift */; };
+		09A7030D265371FC00B8BDE6 /* SmallWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */; };
+		09A7030E265371FC00B8BDE6 /* ItemsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7030A265371FC00B8BDE6 /* ItemsGridView.swift */; };
+		09A703172653D6DE00B8BDE6 /* Color+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB018264CE6910084B50B /* Color+Application.swift */; };
 		222EB87E26525D2B00BF46BD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB87D26525D2B00BF46BD /* SearchBarView.swift */; };
 		222EB886265268BA00BF46BD /* View+CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB885265268BA00BF46BD /* View+CustomOverlayView.swift */; };
 		222EB88E2652723B00BF46BD /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222EB88D2652723B00BF46BD /* String+Utility.swift */; };
@@ -120,6 +125,10 @@
 		09A702F9265254B500B8BDE6 /* EcommerceiOSWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = EcommerceiOSWidget.intentdefinition; sourceTree = "<group>"; };
 		09A702FA265254BD00B8BDE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09A702FC265254BD00B8BDE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09A70307265371FC00B8BDE6 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		09A70308265371FC00B8BDE6 /* LargeWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeWidgetView.swift; sourceTree = "<group>"; };
+		09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallWidgetView.swift; sourceTree = "<group>"; };
+		09A7030A265371FC00B8BDE6 /* ItemsGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsGridView.swift; sourceTree = "<group>"; };
 		222EB87D26525D2B00BF46BD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		222EB885265268BA00BF46BD /* View+CustomOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CustomOverlayView.swift"; sourceTree = "<group>"; };
 		222EB88D2652723B00BF46BD /* String+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
@@ -244,6 +253,17 @@
 				09A702FC265254BD00B8BDE6 /* Info.plist */,
 			);
 			path = "ecommerce-iosWidget";
+			sourceTree = "<group>";
+		};
+		09A70306265371FC00B8BDE6 /* WidgetView */ = {
+			isa = PBXGroup;
+			children = (
+				09A70307265371FC00B8BDE6 /* ItemView.swift */,
+				09A70308265371FC00B8BDE6 /* LargeWidgetView.swift */,
+				09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */,
+				09A7030A265371FC00B8BDE6 /* ItemsGridView.swift */,
+			);
+			path = WidgetView;
 			sourceTree = "<group>";
 		};
 		222EB87C26525D0F00BF46BD /* SearchBar */ = {
@@ -390,17 +410,6 @@
 				2282E9C62652320500340FEE /* View+CustomNavigationBarLargeTitle.swift */,
 			);
 			path = "View+NavigationBar";
-			sourceTree = "<group>";
-		};
-		09A70306265371FC00B8BDE6 /* WidgetView */ = {
-			isa = PBXGroup;
-			children = (
-				09A70307265371FC00B8BDE6 /* ItemView.swift */,
-				09A70308265371FC00B8BDE6 /* LargeWidgetView.swift */,
-				09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */,
-				09A7030A265371FC00B8BDE6 /* ItemsGridView.swift */,
-			);
-			path = WidgetView;
 			sourceTree = "<group>";
 		};
 		4220241DC8323604A6DA927B /* Frameworks */ = {
@@ -965,6 +974,7 @@
 				09A702FD265254BD00B8BDE6 /* EcommerceiOSWidget.intentdefinition in Sources */,
 				09A7030B265371FC00B8BDE6 /* ItemView.swift in Sources */,
 				09A7030C265371FC00B8BDE6 /* LargeWidgetView.swift in Sources */,
+				09A703172653D6DE00B8BDE6 /* Color+Application.swift in Sources */,
 				09A7030D265371FC00B8BDE6 /* SmallWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
