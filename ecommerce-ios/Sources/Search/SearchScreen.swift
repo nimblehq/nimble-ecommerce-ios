@@ -16,13 +16,13 @@ struct SearchScreen: View {
 
     private let cellVỉewModels: [SearchItemCellViewModel] = {
         var vms: [SearchItemCellViewModel] = []
-        for (index, itemType) in ItemType.allCases.enumerated() {
+        for searchItem in SearchItem.searchItems {
             vms.append(
                 SearchItemCellViewModel(
-                    id: index,
-                    name: itemType.rawValue,
-                    imageName: itemType.imageName,
-                    numberOfItems: index
+                    id: searchItem.id,
+                    name: searchItem.name,
+                    imageName: searchItem.imageString,
+                    numberOfItems: searchItem.numberOfItems
                 )
             )
         }
