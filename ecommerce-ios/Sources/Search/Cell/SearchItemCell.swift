@@ -12,7 +12,7 @@ struct SearchItemCell: View {
     var viewModel: SearchItemCellViewModel
 
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
+        VStack(alignment: .center, spacing: 0.0) {
             Image(viewModel.imageName)
                 .resizable()
                 .aspectRatio(1.108, contentMode: .fill)
