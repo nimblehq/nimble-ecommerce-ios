@@ -19,6 +19,8 @@ struct HomeScreen: View {
                         .cornerRadius(12.0)
                         .offset(x: 0.0, y: 20.0)
                         .padding([.horizontal], 10.0)
+
+                    CategoryCollectionView(categories: Category.categories)
                 }
             }
             .navigationBarTitle(tab.title)
