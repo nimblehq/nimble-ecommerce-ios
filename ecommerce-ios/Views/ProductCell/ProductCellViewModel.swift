@@ -7,9 +7,9 @@
 
 struct ProductCellViewModel: Identifiable {
 
-    var id: String
+    var id: Int
     var name: String
-    var imageName: String
+    var imageString: String
     var price: Double
     var currency: String
 

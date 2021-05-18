@@ -14,7 +14,7 @@ struct ProductCell: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             VStack {
-                Image(viewModel.imageName)
+                Image(viewModel.imageString)
                 Text(viewModel.name.capitalized)
                     .font(.headline)
                     .foregroundColor(.charadeGray)
@@ -43,22 +43,16 @@ struct ProductCell: View {
 }
 
 struct ProductCell_Previews: PreviewProvider {
+
     static var previews: some View {
         ProductCell(
             viewModel: ProductCellViewModel(
-                id: "cube-pink",
+                id: 1,
                 name: "Pink cube",
-                imageName: "tshirt-cube-pink",
+                imageString: "tshirt-cube-pink",
                 price: 10_000,
                 currency: "฿"
             )
         )
-    }
-}
-
-public extension View {
-
-    func overlay<Content>(@ViewBuilder customView: () -> Content) -> some View where Content: View {
-        overlay(customView())
     }
 }
