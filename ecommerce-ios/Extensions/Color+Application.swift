@@ -47,6 +47,9 @@ extension Color {
     /// #000000 Black with alpha 0.2
     static var blackAlpha2: Color { Color(hex: 0x000000, alpha: 0.2) }
 
+    /// #000000 Black with alpha 0.12
+    static var blackAlpha12: Color { Color(hex: 0x000000, alpha: 0.12) }
+
     // MARK: - Initialize
 
     init(hex: UInt, alpha: Double = 1.0) {
