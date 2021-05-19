@@ -36,6 +36,6 @@ private enum ItemType: String, CaseIterable {
     case cube, sphere, shuzam, ico, taurus, cone
 
     var imageName: String {
-        "icon-\(rawValue)"
+        "screen-search-item/icon-\(rawValue)"
     }
 }

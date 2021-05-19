@@ -10,6 +10,7 @@ struct SearchResultItem: Identifiable {
     var id: Int
     var name: String
     var imageString: String
+    var price: Price
 }
 
 extension SearchResultItem {
@@ -20,8 +21,9 @@ extension SearchResultItem {
             items.append(
                 SearchResultItem(
                     id: index,
-                    name: cubeType.rawValue,
-                    imageString: cubeType.imageName
+                    name: cubeType.name,
+                    imageString: cubeType.imageName,
+                    price: Price(id: "\(index)", amount: index * 1_000, currency: "฿")
                 )
             )
         }
@@ -47,7 +49,6 @@ private enum CubeType: String, CaseIterable {
     }
 
     var imageName: String {
-        "tshirt-cube-\(value)"
+        "screen-search-result-tshirt/tshirt-cube-\(value)"
     }
 }
-
