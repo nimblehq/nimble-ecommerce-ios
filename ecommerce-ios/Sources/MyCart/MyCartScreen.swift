@@ -10,7 +10,16 @@ import SwiftUI
 struct MyCartScreen: View {
 
     var body: some View {
-        Text("My Cart")
+        NavigationView {
+            NoItemView(
+                viewModel: .init(
+                    name: "shopping cart",
+                    imageString: "common-icon/icon-cart"
+                )
+            )
+            .frame(width: screenWidth - 170.0)
+            .navigationTitle("My Cart")
+        }
     }
 }
 
