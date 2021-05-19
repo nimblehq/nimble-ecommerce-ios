@@ -14,7 +14,7 @@ struct SearchBarView: View {
     var body: some View {
         HStack(spacing: 12.0) {
             HStack {
-                Image("icon-search")
+                Image("screen-search/icon-search")
                     .frame(width: 14.0, height: 14.0)
                     .padding()
 
@@ -26,7 +26,7 @@ struct SearchBarView: View {
                     .overlay {
                         Button(
                             action: { searchKeyword = "" },
-                            label: { Image("icon-x-circle") }
+                            label: { Image("screen-search/icon-x-circle") }
                         )
                         .hidden(searchKeyword.isEmpty)
                     }

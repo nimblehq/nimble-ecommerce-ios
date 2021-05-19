@@ -15,7 +15,7 @@ struct SearchItemCell: View {
         VStack(alignment: .center, spacing: 0.0) {
             Image(viewModel.imageName)
                 .resizable()
-                .aspectRatio(1.108, contentMode: .fill)
+                .aspectRatio(1.108, contentMode: .fit)
                 .padding()
             Text(viewModel.name.capitalized)
                 .font(.headline)

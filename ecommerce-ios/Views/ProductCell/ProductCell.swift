@@ -15,6 +15,8 @@ struct ProductCell: View {
         ZStack(alignment: .topTrailing) {
             VStack {
                 Image(viewModel.imageString)
+                    .resizable()
+                    .aspectRatio(1.108, contentMode: .fit)
                 Text(viewModel.name.capitalized)
                     .font(.headline)
                     .foregroundColor(.charadeGray)
@@ -31,11 +33,12 @@ struct ProductCell: View {
                             print("did tap heart button of item \(viewModel.name)")
                         },
                         label: {
-                            Image("icon-heart")
+                            Image("common-icon/icon-heart")
                         }
                     )
                 }
         }
+        .aspectRatio(contentMode: .fit)
         .onTapGesture {
             print("did tap product cell \(viewModel.name)")
         }
@@ -49,10 +52,11 @@ struct ProductCell_Previews: PreviewProvider {
             viewModel: ProductCellViewModel(
                 id: 1,
                 name: "Pink cube",
-                imageString: "tshirt-cube-pink",
+                imageString: "screen-search-result-tshirt/tshirt-cube-pink",
                 price: 10_000,
                 currency: "฿"
             )
         )
+        .frame(width: 200, height: 300)
     }
 }

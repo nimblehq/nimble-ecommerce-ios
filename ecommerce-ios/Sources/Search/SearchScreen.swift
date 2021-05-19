@@ -16,13 +16,13 @@ struct SearchScreen: View {
 
     private let cellVỉewModels: [SearchItemCellViewModel] = {
         var vms: [SearchItemCellViewModel] = []
-        for (index, itemType) in ItemType.allCases.enumerated() {
+        for searchItem in SearchItem.searchItems {
             vms.append(
                 SearchItemCellViewModel(
-                    id: index,
-                    name: itemType.rawValue,
-                    imageName: itemType.imageName,
-                    numberOfItems: index
+                    id: searchItem.id,
+                    name: searchItem.name,
+                    imageName: searchItem.imageString,
+                    numberOfItems: searchItem.numberOfItems
                 )
             )
         }
@@ -47,13 +47,33 @@ struct SearchScreen: View {
                 SearchBarView(searchKeyword: $searchKeyword)
                 LazyVGrid(columns: columns, spacing: spacing) {
                     ForEach(searchResultCellViewModels) { viewModel in
-                        SearchItemCell(viewModel: viewModel)
+                        NavigationLink(destination: searchResultScreen(viewModel)) {
+                            SearchItemCell(viewModel: viewModel)
+                        }
                     }
                 }
                 .padding(.horizontal)
             }
-            .navigationBarTitle("List")
+            .navigationBarTitle("Shop")
         }
+    }
+
+    private func searchResultScreen(_ viewModel: SearchItemCellViewModel) -> some View {
+        SearchResultScreen(viewModel: .init(id: "\(viewModel.id)", name: viewModel.name))
+            .navigationTitle(viewModel.name.capitalized)
+            .navigationBarLargeTitle {
+                CustomNavigationBarLargeTitleView(
+                    titleView: {
+                        Text(viewModel.name.capitalized)
+                            .font(.largeTitle.bold())
+                    },
+                    trailingView: {
+                        Button("Filter(1)") {
+                            print("did tap filter button")
+                        }
+                    }
+                )
+            }
     }
 }
 
