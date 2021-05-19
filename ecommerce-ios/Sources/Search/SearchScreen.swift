@@ -54,7 +54,7 @@ struct SearchScreen: View {
                 }
                 .padding(.horizontal)
             }
-            .navigationBarTitle("List")
+            .navigationBarTitle("Shop")
         }
     }
 
