@@ -47,13 +47,33 @@ struct SearchScreen: View {
                 SearchBarView(searchKeyword: $searchKeyword)
                 LazyVGrid(columns: columns, spacing: spacing) {
                     ForEach(searchResultCellViewModels) { viewModel in
-                        SearchItemCell(viewModel: viewModel)
+                        NavigationLink(destination: searchResultScreen(viewModel)) {
+                            SearchItemCell(viewModel: viewModel)
+                        }
                     }
                 }
                 .padding(.horizontal)
             }
             .navigationBarTitle("List")
         }
+    }
+
+    private func searchResultScreen(_ viewModel: SearchItemCellViewModel) -> some View {
+        SearchResultScreen(viewModel: .init(id: "\(viewModel.id)", name: viewModel.name))
+            .navigationTitle(viewModel.name.capitalized)
+            .navigationBarLargeTitle {
+                CustomNavigationBarLargeTitleView(
+                    titleView: {
+                        Text(viewModel.name.capitalized)
+                            .font(.largeTitle.bold())
+                    },
+                    trailingView: {
+                        Button("Filter(1)") {
+                            print("did tap filter button")
+                        }
+                    }
+                )
+            }
     }
 }
 

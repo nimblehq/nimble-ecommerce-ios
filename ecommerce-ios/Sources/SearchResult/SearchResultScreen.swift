@@ -37,30 +37,15 @@ struct SearchResultScreen: View {
     }
 
     var body: some View {
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: true) {
-                LazyVGrid(columns: columns, spacing: spacing) {
-                    ForEach(cellVỉewModels) { viewModel in
-                        ProductCell(viewModel: viewModel)
-                    }
+        ScrollView(.vertical, showsIndicators: true) {
+            LazyVGrid(columns: columns, spacing: spacing) {
+                ForEach(cellVỉewModels) { viewModel in
+                    ProductCell(viewModel: viewModel)
                 }
-                .padding(.horizontal)
             }
-            .navigationTitle(viewModel.name.capitalized)
-            .navigationBarLargeTitle {
-                CustomNavigationBarLargeTitleView(
-                    titleView: {
-                        Text(viewModel.name.capitalized)
-                            .font(.largeTitle.bold())
-                    },
-                    trailingView: {
-                        Button("Filter(1)") {
-                            print("did tap filter button")
-                        }
-                    }
-                )
-            }
+            .padding(.vertical, 10.0)
         }
+        .accentColor(.mainBlue)
     }
 }
 
