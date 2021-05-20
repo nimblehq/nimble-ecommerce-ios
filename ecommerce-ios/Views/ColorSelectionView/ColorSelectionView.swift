@@ -17,13 +17,8 @@ struct ColorSelectionView: View {
     private static let spacing: CGFloat = 8.0
     private static let horizontalSpacing: CGFloat = 34.0
 
-    private static let itemWidth: CGFloat = {
-        let numberOfColumns = CGFloat(Self.numberOfColumns)
-        return ((screenWidth - Self.spacing * (numberOfColumns + 1) - Self.horizontalSpacing) / numberOfColumns).rounded(.down)
-    }()
-
     private static let columns: [GridItem] = {
-        [.init(.adaptive(minimum: itemWidth))]
+        Array(repeating: .init(.flexible()), count: 2)
     }()
 
     private var grayGoundRectangle: some View {
@@ -42,14 +37,14 @@ struct ColorSelectionView: View {
                 ForEach(cellViewModels) { cellViewModel in
                     if selectedViewModel == cellViewModel {
                         ColorCell(viewModel: cellViewModel)
-                            .frame(width: Self.itemWidth, height: 74.0)
+                            .frame(height: 74.0)
                             .background(blueRoundRectangle)
                             .onTapGesture {
                                 selectedViewModel = cellViewModel
                             }
                     } else {
                         ColorCell(viewModel: cellViewModel)
-                            .frame(width: Self.itemWidth, height: 74.0)
+                            .frame(height: 74.0)
                             .background(grayGoundRectangle)
                             .onTapGesture {
                                 selectedViewModel = cellViewModel
@@ -58,7 +53,6 @@ struct ColorSelectionView: View {
                 }
             }
         }
-
     }
 
     init(cellViewModels: [ColorCellViewModel]) {
