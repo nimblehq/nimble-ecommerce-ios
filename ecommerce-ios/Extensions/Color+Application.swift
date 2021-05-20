@@ -40,6 +40,9 @@ extension Color {
     /// #F9FBFD Gray 100
     static var blackSqueeze: Color { Color(hex: 0xF9FBFD) }
 
+    /// #252525
+    static var mineShaftGray: Color { Color(hex: 0x252525) }
+
     // MARK: - Violet
 
     /// #534ACC
