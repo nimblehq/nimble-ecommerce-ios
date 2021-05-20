@@ -7,7 +7,20 @@
 
 import SwiftUI
 
-enum Constants { }
+enum Constants {
+
+    enum Collection: Int, CaseIterable {
+        case popular, newArrival, forYou
+
+        var title: String {
+            switch self {
+            case .popular: return "Popular"
+            case .newArrival: return "New Arrival"
+            case .forYou: return "For Your"
+            }
+        }
+    }
+}
 
 extension Constants {
 
