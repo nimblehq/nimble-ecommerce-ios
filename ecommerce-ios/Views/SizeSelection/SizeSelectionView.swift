@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SizeSelectionView: View {
 
-    @State private var selectedViewModel: SizeCellViewModel
+    @State private var selectedViewModel: SizeCellViewModel?
 
     let cellViewModels: [SizeCellViewModel]
 
@@ -58,7 +58,7 @@ struct SizeSelectionView: View {
 
     init(cellViewModels: [SizeCellViewModel]) {
         self.cellViewModels = cellViewModels
-        selectedViewModel = cellViewModels.first!
+        selectedViewModel = cellViewModels.first
     }
 }
 
