@@ -33,6 +33,6 @@ struct CustomNavigationBarContentView_Previews: PreviewProvider {
             contentView: Text("Some title").font(.title),
             trailingView: Button("Cancel", action: { }).font(.footnote)
         )
-        .frame(width: screenWidth, height: 100.0)
+        .frame(maxWidth: .infinity, minHeight: 100.0)
     }
 }

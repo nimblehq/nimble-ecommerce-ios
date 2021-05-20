@@ -17,7 +17,8 @@ struct MyCartScreen: View {
                     imageString: "common-icon/icon-cart"
                 )
             )
-            .frame(width: screenWidth - 170.0)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 85.0)
             .navigationTitle("My Cart")
         }
     }

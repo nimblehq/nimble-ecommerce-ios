@@ -11,7 +11,6 @@ extension Double {
 
     func formatted(with formatter: NumberFormatter) -> String {
         guard let formattedString = formatter.string(from: NSNumber(value: self)) else { return "" }
-        #warning("reuse the trimmed variable of extension String")
-        return formattedString.trimmingCharacters(in: .whitespacesAndNewlines)
+        return formattedString.trimmed
     }
 }

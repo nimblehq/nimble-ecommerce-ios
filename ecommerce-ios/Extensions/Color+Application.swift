@@ -28,6 +28,9 @@ extension Color {
     /// #292A33 Gray 900 with alpha 0.4
     static var charadeGrayAlpha4: Color { Color(hex: 0x292A33, alpha: 0.4) }
 
+    /// #292A33 Gray 900 with alpha 0.7
+    static var charadeGrayAlpha7: Color { Color(hex: 0x292A33, alpha: 0.7) }
+
     /// #DADADA
     static var altoGray: Color { Color(hex: 0xDADADA) }
 
@@ -38,6 +41,11 @@ extension Color {
 
     /// #534ACC
     static var indigoViolet: Color { Color(hex: 0x534ACC) }
+
+    // MARK: - Black
+
+    /// #000000 Black with alpha 0.2
+    static var blackAlpha2: Color { Color(hex: 0x000000, alpha: 0.2) }
 
     // MARK: - Initialize
 
