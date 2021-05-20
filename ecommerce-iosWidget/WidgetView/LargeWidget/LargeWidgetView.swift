@@ -20,7 +20,7 @@ struct LargeWidgetView: View {
                     .frame(maxWidth: .infinity)
                     .padding([.horizontal, .bottom], 16.0)
                     .padding(.top, 25.0)
-                    .background(Color.gray)
+                    .background(Color.blackSqueeze)
             }
             LogoView()
         }
