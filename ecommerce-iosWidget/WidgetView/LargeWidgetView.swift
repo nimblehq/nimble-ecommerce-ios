@@ -15,7 +15,7 @@ struct LargeWidgetView: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .fill(Color.gray100)
+                    .fill(Color.blackSqueeze)
                     .frame(maxWidth: .infinity, maxHeight: 182.0)
             }
             VStack {
@@ -26,7 +26,6 @@ struct LargeWidgetView: View {
                 Spacer(minLength: 25.0)
                 ItemsGridView(items: ["1", "2", "3", "4", "5", "6", "7"])
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Spacer()
             }
             .padding()
         }

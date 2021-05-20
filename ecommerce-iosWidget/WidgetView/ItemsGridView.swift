@@ -12,9 +12,7 @@ struct ItemsGridView: View {
 
     var items: [String]
 
-    let columns = [
-        GridItem(.adaptive(minimum: 64.0))
-    ]
+    let columns = [GridItem(.adaptive(minimum: 64.0))]
 
     var body: some View {
         LazyVGrid(columns: columns, spacing: 15.0) {
