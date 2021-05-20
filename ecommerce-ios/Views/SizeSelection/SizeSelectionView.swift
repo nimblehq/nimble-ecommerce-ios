@@ -16,13 +16,8 @@ struct SizeSelectionView: View {
     private let spacing: CGFloat = 8.0
     private let horizontalSpacing: CGFloat = 34.0
 
-    private var itemWidth: CGFloat {
-        let numberOfColumns = CGFloat(self.cellViewModels.count)
-        return ((screenWidth - spacing * (numberOfColumns + 1) - horizontalSpacing) / numberOfColumns).rounded(.down)
-    }
-
     private var columns: [GridItem] {
-        [.init(.adaptive(minimum: itemWidth))]
+        .init(repeating: GridItem(.flexible()), count: self.cellViewModels.count)
     }
 
     private var grayGoundRectangle: some View {
@@ -42,14 +37,14 @@ struct SizeSelectionView: View {
                     ZStack {
                         if selectedViewModel == cellViewModel {
                             SizeCell(viewModel: cellViewModel)
-                                .frame(width: itemWidth, height: 80.0)
+                                .frame(height: 80.0)
                                 .background(blueRoundRectangle)
                                 .onTapGesture {
                                     selectedViewModel = cellViewModel
                                 }
                         } else {
                             SizeCell(viewModel: cellViewModel)
-                                .frame(width: itemWidth, height: 80.0)
+                                .frame(height: 80.0)
                                 .background(grayGoundRectangle)
                                 .onTapGesture {
                                     selectedViewModel = cellViewModel
@@ -73,7 +68,7 @@ struct SizeSelectionView_Previews: PreviewProvider {
             SizeCellViewModel(id: "s", name: "s"),
             SizeCellViewModel(id: "m", name: "m"),
             SizeCellViewModel(id: "l", name: "l"),
-            SizeCellViewModel(id: "xl", name: "xxl"),
+            SizeCellViewModel(id: "xl", name: "xl"),
             SizeCellViewModel(id: "xxl", name: "xxl"),
             SizeCellViewModel(id: "xxxl", name: "xxxl")
         ])
