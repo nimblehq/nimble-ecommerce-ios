@@ -52,9 +52,6 @@
 		229D55022655597400114B3E /* ColorCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D55012655597400114B3E /* ColorCellViewModel.swift */; };
 		229D55042655598500114B3E /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D55032655598500114B3E /* ColorCell.swift */; };
 		229D55062655599B00114B3E /* ColorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D55052655599B00114B3E /* ColorSelectionView.swift */; };
-		09A703112653735100B8BDE6 /* LargeWidgetTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A703102653735100B8BDE6 /* LargeWidgetTitleView.swift */; };
-		09A70313265374E100B8BDE6 /* ItemDescritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A70312265374E100B8BDE6 /* ItemDescritionView.swift */; };
-		09A7031526537BE400B8BDE6 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7031426537BE400B8BDE6 /* LogoView.swift */; };
 		229D550B265569B000114B3E /* ProfileAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D550A265569B000114B3E /* ProfileAboutView.swift */; };
 		229D550D265569BC00114B3E /* ProfileAboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D550C265569BC00114B3E /* ProfileAboutViewModel.swift */; };
 		229D55102656429900114B3E /* SettingSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D550F2656429900114B3E /* SettingSectionHeader.swift */; };
@@ -191,9 +188,6 @@
 		229D55012655597400114B3E /* ColorCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCellViewModel.swift; sourceTree = "<group>"; };
 		229D55032655598500114B3E /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		229D55052655599B00114B3E /* ColorSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionView.swift; sourceTree = "<group>"; };
-		09A703102653735100B8BDE6 /* LargeWidgetTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetTitleView.swift; sourceTree = "<group>"; };
-		09A70312265374E100B8BDE6 /* ItemDescritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDescritionView.swift; sourceTree = "<group>"; };
-		09A7031426537BE400B8BDE6 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		229D550A265569B000114B3E /* ProfileAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAboutView.swift; sourceTree = "<group>"; };
 		229D550C265569BC00114B3E /* ProfileAboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAboutViewModel.swift; sourceTree = "<group>"; };
 		229D550F2656429900114B3E /* SettingSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionHeader.swift; sourceTree = "<group>"; };
@@ -1382,6 +1376,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nimblehq.ecommerce-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1405,6 +1400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nimblehq.ecommerce-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
