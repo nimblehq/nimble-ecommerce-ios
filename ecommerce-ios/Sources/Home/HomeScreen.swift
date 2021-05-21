@@ -21,6 +21,8 @@ struct HomeScreen: View {
                         .padding([.horizontal], 10.0)
 
                     CategoryCollectionView(categories: Category.categories)
+
+                    ProductCollectionView(viewModel: .init())
                 }
             }
             .navigationBarTitle(tab.title)
