@@ -12,13 +12,13 @@ struct ItemsGridView: View {
 
     var items: [String]
 
-    let columns = [GridItem(.adaptive(minimum: 64.0))]
+    let columns = Array(repeating: GridItem(.flexible()), count: 4)
 
     var body: some View {
         LazyVGrid(columns: columns, spacing: 15.0) {
             ForEach(items, id: \.self) { _ in
                 ItemView(imageName: "star.fill")
-                    .frame(width: 64.0, height: 64.0)
+                    .aspectRatio(1.0, contentMode: .fit)
             }
         }
     }
