@@ -27,7 +27,8 @@ struct SettingSectionHeader: View {
     }
 }
 
-struct SettingSectionHeader_Previews: PreviewProvider {
+struct SettingsSectionHeader_Previews: PreviewProvider {
+    
     static var previews: some View {
         SettingSectionHeader(viewModel: "My Order")
     }

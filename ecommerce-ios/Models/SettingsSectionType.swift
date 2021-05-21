@@ -1,11 +1,11 @@
 //
-//  SettingSectionType.swift
+//  SettingsSectionType.swift
 //  ecommerce-ios
 //
 //  Created by Nguyen M. Tam on 20/05/2021.
 //
 
-enum SettingSectionType: Int, CaseIterable {
+enum SettingsSectionType: Int, CaseIterable {
 
     case myOrder, myAddress
 
@@ -16,7 +16,7 @@ enum SettingSectionType: Int, CaseIterable {
         }
     }
 
-    var settingTypes: [SettingType] {
+    var settingTypes: [SettingsType] {
         switch self {
         case .myOrder: return [.myOrder, .myReturn]
         case .myAddress: return [.shippingAddress, .billingAddress, .taxInvoiceAddress, .myWishlist, .logOut]

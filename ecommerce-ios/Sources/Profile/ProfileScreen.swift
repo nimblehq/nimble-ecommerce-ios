@@ -9,28 +9,8 @@ import SwiftUI
 
 struct ProfileScreen: View {
 
-    private let sectionViewModels: [SettingSectionViewModel] = {
-        var sectionViewModels: [SettingSectionViewModel] = []
-        SettingSectionType.allCases.forEach { settingSectionType in
-            var cellViewModels: [SettingCellViewModel] = []
-            settingSectionType.settingTypes.forEach { settingType in
-                cellViewModels.append(
-                    .init(
-                        id: settingType.rawValue,
-                        imageString: settingType.imageString,
-                        settingName: settingType.title
-                    )
-                )
-            }
-            sectionViewModels.append(
-                .init(
-                    id: settingSectionType.rawValue,
-                    title: settingSectionType.title,
-                    cellViewModels: cellViewModels
-                )
-            )
-        }
-        return sectionViewModels
+    private let sectionViewModels: [SettingsSectionViewModel] = {
+        SettingsSectionType.allCases.map(SettingsSectionViewModel.init)
     }()
 
     private let columns = [GridItem(.flexible())]
@@ -49,7 +29,7 @@ struct ProfileScreen: View {
                     ForEach(sectionViewModels) { sectionViewModel in
                         Section(header: SettingSectionHeader(viewModel: sectionViewModel.title)) {
                             ForEach(sectionViewModel.cellViewModels) { cellViewModel in
-                                SettingCell(viewModel: cellViewModel)
+                                SettingsCell(viewModel: cellViewModel)
                             }
                         }
                     }

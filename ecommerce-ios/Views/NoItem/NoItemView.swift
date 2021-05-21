@@ -24,6 +24,7 @@ struct NoItemView: View {
 }
 
 struct NoItemView_Previews: PreviewProvider {
+    
     static var previews: some View {
         NoItemView(viewModel: .init(name: "shopping cart", imageString: "common-icon/icon-cart"))
             .frame(width: 200.0, height: 400.0)

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct SettingCell: View {
+struct SettingsCell: View {
 
-    let viewModel: SettingCellViewModel
+    let viewModel: SettingsCellViewModel
 
     var body: some View {
         HStack(spacing: 14.0) {
@@ -32,8 +32,9 @@ struct SettingCell: View {
     }
 }
 
-struct SettingCell_Previews: PreviewProvider {
+struct SettingsCell_Previews: PreviewProvider {
+
     static var previews: some View {
-        SettingCell(viewModel: .init(id: 0, imageString: "screen-profile/icon-my-order", settingName: "My orders"))
+        SettingsCell(viewModel: .init(id: 0, imageString: "screen-profile/icon-my-order", settingName: "My orders"))
     }
 }

@@ -26,6 +26,7 @@ struct CategoryCollectionView: View {
 }
 
 struct CategoryCollectionView_Previews: PreviewProvider {
+    
     static var previews: some View {
         CategoryCollectionView(categories: Category.categories)
             .previewLayout(

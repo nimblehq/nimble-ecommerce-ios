@@ -1,11 +1,11 @@
 //
-//  SettingType.swift
+//  SettingsType.swift
 //  ecommerce-ios
 //
 //  Created by Nguyen M. Tam on 20/05/2021.
 //
 
-enum SettingType: Int, CaseIterable {
+enum SettingsType: Int, CaseIterable {
 
     case myOrder, myReturn, shippingAddress, billingAddress, taxInvoiceAddress, myWishlist, logOut
 
@@ -22,14 +22,15 @@ enum SettingType: Int, CaseIterable {
     }
 
     var imageString: String {
+        let directory = "screen-profile/"
         switch self {
-        case .myOrder: return "screen-profile/icon-my-order"
-        case .myReturn: return "screen-profile/icon-my-return"
-        case .shippingAddress: return "screen-profile/icon-shipping-address"
-        case .billingAddress: return "screen-profile/icon-billing-address"
-        case .taxInvoiceAddress: return "screen-profile/icon-tax-invoice-address"
-        case .myWishlist: return "screen-profile/icon-my-wishlist"
-        case .logOut: return "screen-profile/icon-log-out"
+        case .myOrder: return "\(directory)icon-my-order"
+        case .myReturn: return "\(directory)icon-my-return"
+        case .shippingAddress: return "\(directory)icon-shipping-address"
+        case .billingAddress: return "\(directory)icon-billing-address"
+        case .taxInvoiceAddress: return "\(directory)icon-tax-invoice-address"
+        case .myWishlist: return "\(directory)icon-my-wishlist"
+        case .logOut: return "\(directory)icon-log-out"
         }
     }
 }
