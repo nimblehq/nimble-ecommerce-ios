@@ -13,7 +13,7 @@ struct SmallWidgetView: View {
     var body: some View {
         VStack {
             HStack {
-                ItemView(imageName: "star.fill")
+                ItemView(item: .itemPlaceholder)
                     .frame(width: 62.0, height: 62.0)
                 Spacer()
             }
