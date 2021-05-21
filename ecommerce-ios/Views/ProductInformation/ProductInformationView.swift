@@ -50,17 +50,33 @@ struct ProductInformationView: View {
                     .font(.system(size: 22.0).weight(.bold))
                     .foregroundColor(.charadeGray)
                 Text(viewModel.descrition)
-                    .font(.system(size: 22.0))
+                    .font(.system(size: 17.0))
                     .foregroundColor(.charadeGrayAlpha7)
             }
         }
         .padding(.horizontal, 16.0)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(trailingView: {
+            HStack(spacing: 10.0) {
+                Button(action: { print("did tap favorite button") } ) {
+                    Image("common-icon/icon-favorite-light")
+                        .frame(width: 44.0, height: 44.0)
+                }
+
+                Button(action: { print("did tap share button") } ) {
+                    Image("common-icon/icon-share")
+                        .frame(width: 44.0, height: 44.0)
+                }
+            }
+        })
     }
 }
 
 struct ProductInformation_Previews: PreviewProvider {
 
     static var previews: some View {
-        ProductInformationView(viewModel: ProductInformationViewModel.productInformation)
+        NavigationView {
+            ProductInformationView(viewModel: ProductInformationViewModel.productInformation)
+        }
     }
 }
