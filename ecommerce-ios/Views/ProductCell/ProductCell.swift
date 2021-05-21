@@ -39,9 +39,6 @@ struct ProductCell: View {
                 }
         }
         .aspectRatio(contentMode: .fit)
-        .onTapGesture {
-            print("did tap product cell \(viewModel.name)")
-        }
     }
 }
 

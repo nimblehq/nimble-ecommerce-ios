@@ -10,3 +10,11 @@ struct SizeCellViewModel: Identifiable, Hashable {
     let id: String
     let name: String
 }
+
+extension SizeCellViewModel {
+
+    init(productSizeType: ProductSizeType) {
+        id = productSizeType.rawValue
+        name = productSizeType.rawValue
+    }
+}

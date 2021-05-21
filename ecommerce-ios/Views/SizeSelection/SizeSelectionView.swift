@@ -37,14 +37,14 @@ struct SizeSelectionView: View {
                     ZStack {
                         if selectedViewModel == cellViewModel {
                             SizeCell(viewModel: cellViewModel)
-                                .frame(height: 80.0)
+                                .frame(height: 50.0)
                                 .background(blueRoundRectangle)
                                 .onTapGesture {
                                     selectedViewModel = cellViewModel
                                 }
                         } else {
                             SizeCell(viewModel: cellViewModel)
-                                .frame(height: 80.0)
+                                .frame(height: 50.0)
                                 .background(grayGoundRectangle)
                                 .onTapGesture {
                                     selectedViewModel = cellViewModel
@@ -54,6 +54,8 @@ struct SizeSelectionView: View {
                 }
             }
         }
+        .contentShape(Rectangle())
+        .padding(.horizontal, 16.0)
     }
 
     init(cellViewModels: [SizeCellViewModel]) {
@@ -63,15 +65,9 @@ struct SizeSelectionView: View {
 }
 
 struct SizeSelectionView_Previews: PreviewProvider {
+
     static var previews: some View {
-        SizeSelectionView(cellViewModels: [
-            SizeCellViewModel(id: "s", name: "s"),
-            SizeCellViewModel(id: "m", name: "m"),
-            SizeCellViewModel(id: "l", name: "l"),
-            SizeCellViewModel(id: "xl", name: "xl"),
-            SizeCellViewModel(id: "xxl", name: "xxl"),
-            SizeCellViewModel(id: "xxxl", name: "xxxl")
-        ])
-        .padding(.horizontal, 17.0)
+        SizeSelectionView(cellViewModels: ProductSizeType.allCases.map(SizeCellViewModel.init))
+            .frame(width: .infinity, height: 100.0)
     }
 }
