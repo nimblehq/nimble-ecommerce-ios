@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tshirt-cube-indigo.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
