@@ -9,6 +9,10 @@ labels: "type : feature"
 
 Describe the big picture of the feature and why it's needed. 
  
-## Who Benefits?
+## Acceptance criteria
 
 Describe who will be the beneficiaries e.g. everyone, specific chapters, clients...
+
+## Resources
+
+Provide resource that will be used e.g. design link, images...
