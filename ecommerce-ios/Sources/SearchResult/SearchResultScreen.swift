@@ -11,8 +11,11 @@ struct SearchResultScreen: View {
 
     let viewModel: SearchResultScreenViewModel
 
+    @State private var isFilterScreenPresenting: Bool = false
+
     private let numberOfColumns = 2
     private let spacing: CGFloat = 17.0
+
     private let cellVỉewModels: [ProductCellViewModel] = {
         #warning("implement mock view model for product")
         var vms: [ProductCellViewModel] = []
@@ -38,13 +41,30 @@ struct SearchResultScreen: View {
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
+            CustomNavigationBarLargeTitleView(
+                titleView: {
+                    Text(viewModel.name.capitalized)
+                        .font(.largeTitle.bold())
+                },
+                trailingView: {
+                    Button("Filter(1)") {
+                        isFilterScreenPresenting = true
+                    }
+                    .fullScreenCover(isPresented: $isFilterScreenPresenting) {
+                        NavigationView {
+                            FilterScreen()
+                        }
+                    }
+                }
+            )
+
             LazyVGrid(columns: columns, spacing: spacing) {
                 ForEach(cellVỉewModels) { viewModel in
                     ProductCell(viewModel: viewModel)
                 }
             }
-            .padding(.vertical, 10.0)
         }
+        .navigationBarTitleDisplayMode(.inline)
         .accentColor(.mainBlue)
     }
 }
