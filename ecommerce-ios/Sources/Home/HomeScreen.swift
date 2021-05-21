@@ -22,7 +22,7 @@ struct HomeScreen: View {
 
                     CategoryCollectionView(categories: Category.categories)
 
-                    ProductCollectionView()
+                    ProductCollectionView(viewModel: .init())
                 }
             }
             .navigationBarTitle(tab.title)

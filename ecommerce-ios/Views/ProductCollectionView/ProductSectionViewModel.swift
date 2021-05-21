@@ -1,13 +1,13 @@
 //
-//  ProductSection.swift
+//  ProductSectionViewModel.swift
 //  ecommerce-ios
 //
 //  Created by Su T. Nguyen on 20/05/2021.
 //
 
-import Foundation
+import SwiftUI
 
-struct ProductSection: Identifiable {
+struct ProductSectionViewModel: Identifiable {
 
     let id: Int
     let title: String
@@ -16,7 +16,7 @@ struct ProductSection: Identifiable {
 
 // MARK: - Dummy a product
 
-extension ProductSection {
+extension ProductSectionViewModel {
 
     init(collection: Constants.Collection) {
         var cellVMs: [ProductCellViewModel] = []

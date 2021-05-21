@@ -9,33 +9,22 @@ import SwiftUI
 
 struct ProductCollectionView: View {
 
-    private let viewModel = ProductCollectionViewViewModel()
+    let viewModel: ProductCollectionViewViewModel
 
     private let numberOfColumns: Int = 2
     private let spacing: CGFloat = 17.0
 
-    private var columns: [GridItem] {
-        let numberOfColumns = CGFloat(self.numberOfColumns)
-        let minimunWidth = ((screenWidth - spacing * (numberOfColumns + 1)) / numberOfColumns).rounded(.down)
-        return [.init(.adaptive(minimum: minimunWidth))]
+    fileprivate var columns: [GridItem] {
+        .init(repeating: GridItem(.flexible()), count: numberOfColumns)
     }
 
     var body: some View {
-        let sections = viewModel.sections.filter { $0.cellViewModels.count != 0 }
+        let sections = viewModel.sectionViewModels.filter { $0.cellViewModels.count != 0 }
 
         return LazyVStack {
             ForEach(sections) { section in
                 VStack {
-                    HStack {
-                        Text(section.title)
-                            .font(.system(size: 22.0, weight: .bold))
-                        Spacer()
-                        Button("Shop all") {
-                            print("Did tap shop all button")
-                        }
-                        .font(.system(size: 15.0))
-                        .foregroundColor(.purpleBlue)
-                    }
+                    ProductSectionHeaderView(viewModel: .init(title: section.title))
 
                     LazyVGrid(columns: columns, spacing: spacing) {
                         ForEach(section.cellViewModels) { cellVM in
@@ -53,7 +42,7 @@ struct ProductCollectionView: View {
 struct ProductCollectionView_Previews: PreviewProvider {
 
     static var previews: some View {
-        ProductCollectionView()
+        ProductCollectionView(viewModel: .init())
             .previewLayout(.fixed(width: screenWidth, height: 261.0))
     }
 }

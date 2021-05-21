@@ -9,12 +9,12 @@ import Foundation
 
 struct ProductCollectionViewViewModel {
 
-    let sections: [ProductSection]
+    let sectionViewModels: [ProductSectionViewModel]
 }
 
 extension ProductCollectionViewViewModel {
 
     init() {
-        sections = Constants.Collection.allCases.map(ProductSection.init)
+        sectionViewModels = Constants.Collection.allCases.map(ProductSectionViewModel.init)
     }
 }
