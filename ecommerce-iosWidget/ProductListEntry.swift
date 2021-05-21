@@ -21,7 +21,7 @@ extension WidgetProduct {
 
     var widgetURL: URL {
         let urlString = "\(id)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
-        return URL(string: "ecommerce-swiftui://\(urlString)") ?? URL(fileURLWithPath: "")
+        return URL(string: "\(DeeplinkUtility.deeplinkScheme)\(urlString)") ?? URL(fileURLWithPath: "")
     }
 
     static var placeholder: [WidgetProduct] {

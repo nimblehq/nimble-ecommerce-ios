@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchScreen: View {
 
     @State private var searchKeyword: String = ""
+    @State private var deeplinkedId: Int?
 
     private let numberOfColumns = 2
     private let spacing: CGFloat = 17.0
@@ -47,7 +48,10 @@ struct SearchScreen: View {
                 SearchBarView(searchKeyword: $searchKeyword)
                 LazyVGrid(columns: columns, spacing: spacing) {
                     ForEach(searchResultCellViewModels) { viewModel in
-                        NavigationLink(destination: searchResultScreen(viewModel)) {
+                        NavigationLink(
+                            destination: searchResultScreen(viewModel),
+                            tag: viewModel.id,
+                            selection: $deeplinkedId) {
                             SearchItemCell(viewModel: viewModel)
                         }
                     }
@@ -55,6 +59,9 @@ struct SearchScreen: View {
                 .padding(.horizontal)
             }
             .navigationBarTitle("Shop")
+        }
+        .onOpenURL { url in
+            deeplinkedId = DeeplinkUtility.idFromURL(url)
         }
     }
 

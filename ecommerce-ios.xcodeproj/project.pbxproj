@@ -20,6 +20,8 @@
 		090763B426575FD800E9D946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BD9D2642B13900419FE2 /* Assets.xcassets */; };
 		090763B52657602200E9D946 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90248446264E6554008ECEE5 /* Price.swift */; };
 		090763B826576B5300E9D946 /* WidgetFamily+Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090763B726576B5300E9D946 /* WidgetFamily+Count.swift */; };
+		090763BA2657ABA700E9D946 /* DeeplinkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090763B92657ABA700E9D946 /* DeeplinkUtility.swift */; };
+		090763BB2657ABD400E9D946 /* DeeplinkUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090763B92657ABA700E9D946 /* DeeplinkUtility.swift */; };
 		09A702F3265254B500B8BDE6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A702F2265254B500B8BDE6 /* WidgetKit.framework */; };
 		09A702F5265254B500B8BDE6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A702F4265254B500B8BDE6 /* SwiftUI.framework */; };
 		09A702F8265254B500B8BDE6 /* EcommerceiOSWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A702F7265254B500B8BDE6 /* EcommerceiOSWidget.swift */; };
@@ -166,6 +168,7 @@
 		0907635E2657581500E9D946 /* ProductListEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListEntry.swift; sourceTree = "<group>"; };
 		090763602657588F00E9D946 /* ProductListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListProvider.swift; sourceTree = "<group>"; };
 		090763B726576B5300E9D946 /* WidgetFamily+Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetFamily+Count.swift"; sourceTree = "<group>"; };
+		090763B92657ABA700E9D946 /* DeeplinkUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkUtility.swift; sourceTree = "<group>"; };
 		09A702F1265254B500B8BDE6 /* ecommerce-iosWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ecommerce-iosWidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A702F2265254B500B8BDE6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		09A702F4265254B500B8BDE6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -396,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				224CB005264C3F7A0084B50B /* ScreenSize+Ultility.swift */,
+				090763B92657ABA700E9D946 /* DeeplinkUtility.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1231,6 +1235,7 @@
 				090763AF26575C3700E9D946 /* NumberFormatters+Formatter.swift in Sources */,
 				090763592657558800E9D946 /* LargeWidgetView.swift in Sources */,
 				090763B226575EBE00E9D946 /* String+Utility.swift in Sources */,
+				090763BB2657ABD400E9D946 /* DeeplinkUtility.swift in Sources */,
 				090763AE26575C3200E9D946 /* Double+NumberFormatter.swift in Sources */,
 				0907635B265755D600E9D946 /* LogoView.swift in Sources */,
 				090763612657588F00E9D946 /* ProductListProvider.swift in Sources */,
@@ -1314,6 +1319,7 @@
 				229D55132656583000114B3E /* SettingsCell.swift in Sources */,
 				222EB87E26525D2B00BF46BD /* SearchBarView.swift in Sources */,
 				229D55062655599B00114B3E /* ColorSelectionView.swift in Sources */,
+				090763BA2657ABA700E9D946 /* DeeplinkUtility.swift in Sources */,
 				90F6BD9A2642B13500419FE2 /* EcommerceApp.swift in Sources */,
 				229D54E52653D0F500114B3E /* SearchResultScreenViewModel.swift in Sources */,
 				9024843A264D2320008ECEE5 /* View+TabbarItem.swift in Sources */,
