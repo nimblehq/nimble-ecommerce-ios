@@ -23,7 +23,7 @@ struct SortSelectionView: View {
                         .padding(.horizontal, 16.0)
 
                     SortCell(viewModel: cellViewModel)
-                        .frame(height: 44)
+                        .frame(height: 44.0)
                         .onTapGesture {
                             selectedViewModel = cellViewModel
                         }

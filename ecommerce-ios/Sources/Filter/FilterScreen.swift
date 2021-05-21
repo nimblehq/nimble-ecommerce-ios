@@ -14,28 +14,49 @@ struct FilterScreen: View {
     private let filterViewModels = FilterType.allCases
 
     var body: some View {
-        ScrollView {
-            VStack {
-                titleText("Sort by")
+        VStack {
+            titleText("Sort by")
 
-                SortSelectionView()
+            SortSelectionView()
 
-                titleText("Filter by")
+            titleText("Filter by")
 
-                ForEach(filterViewModels, id: \.self) { filterViewModel in
-                    FilterCell(viewModel: filterViewModel.rawValue)
-                }
+            ForEach(filterViewModels, id: \.self) { filterViewModel in
+                FilterCell(viewModel: filterViewModel.rawValue)
+                    .frame(height: 44.0)
             }
+
+            Spacer()
+
+            Button(
+                action: { print("did tap view results button") },
+                label: {
+                    Text("View results")
+                        .font(.system(size: 17.0).weight(.semibold))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, minHeight: 50.0)
+                        .background(Color.mainBlue)
+                        .cornerRadius(10.0)
+                }
+            )
+            .padding(.horizontal, 16.0)
         }
         .navigationTitle("Filters")
         .navigationBarItems(
-            leading: Button(action: { presentationMode.wrappedValue.dismiss() } ) { Text("Close") }
-                .foregroundColor(.mainBlue),
-            trailing: Button(action: { print("did tap reset button") } ) { Text("Reset") }
-                .foregroundColor(.mainBlue)
+            leading: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Close")
+            }
+            .foregroundColor(.mainBlue),
+            trailing: Button(action: {
+                print("did tap reset button")
+            }) {
+                Text("Reset")
+            }
+            .foregroundColor(.mainBlue)
         )
         .navigationBarTitleDisplayMode(.inline)
-        .accentColor(.mainBlue)
     }
 
     private func titleText(_ title: String) -> some View {
