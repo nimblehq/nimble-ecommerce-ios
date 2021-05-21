@@ -35,7 +35,7 @@ struct HomeScreen: View {
                     trailingView: {
                         Button(
                             action: { print("did tap profile button") },
-                            label: { Image("avatar-icon") }
+                            label: { Image("dummy-other/avatar-icon") }
                         )
                     }
                 )

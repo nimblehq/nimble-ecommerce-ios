@@ -22,7 +22,7 @@ extension ProductInformationViewModel {
             id: "id",
             productName: "pink cube",
             productCategory: "cube",
-            imageString: "tshirt",
+            imageString: "dummy-tshirt/tshirt",
             price: Price(id: "price", amount: 10_000, currency: "฿"),
             descrition: """
             The design of Pink Cube was inspired by amazing box. Owning this piece grants the following stats:

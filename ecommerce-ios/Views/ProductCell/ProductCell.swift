@@ -52,7 +52,7 @@ struct ProductCell_Previews: PreviewProvider {
             viewModel: ProductCellViewModel(
                 id: 1,
                 name: "Pink cube",
-                imageString: "screen-search-result-tshirt/tshirt-cube-pink",
+                imageString: "dummy-tshirt/tshirt-cube-pink",
                 price: 10_000,
                 currency: "฿"
             )
