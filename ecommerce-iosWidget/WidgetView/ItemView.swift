@@ -10,29 +10,26 @@ import SwiftUI
 
 struct ItemViewModel: Identifiable {
 
-    var id: Int
-    var name: String
-    var imageString: String
-
-    init(product: WidgetProduct) {
-        id = product.id
-        name = product.name
-        imageString = product.imageString
-    }
-
-    init(id: Int, name: String, imageString: String) {
-        self.id = id
-        self.name = name
-        self.imageString = imageString
-    }
+    let id: Int
+    let name: String
+    let imageString: String
 
     static var placeholder: [ItemViewModel] {
-        WidgetProduct.placeholder.map( ItemViewModel.init)
+        WidgetProduct.placeholder.map(ItemViewModel.init)
     }
     static var itemPlaceholder: ItemViewModel {
         ItemViewModel(
             product: .placeholderItem
         )
+    }
+}
+
+extension ItemViewModel {
+
+    init(product: WidgetProduct) {
+        id = product.id
+        name = product.name
+        imageString = product.imageString
     }
 }
 
