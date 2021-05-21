@@ -23,6 +23,7 @@ struct ColorCell: View {
                         .font(.system(size: 13.0))
                 }
             }
+            .contentShape(Rectangle())
     }
 }
 
