@@ -49,6 +49,6 @@ private enum CubeType: String, CaseIterable {
     }
 
     var imageName: String {
-        "screen-search-result-tshirt/tshirt-cube-\(value)"
+        "dummy-tshirt/tshirt-cube-\(value)"
     }
 }

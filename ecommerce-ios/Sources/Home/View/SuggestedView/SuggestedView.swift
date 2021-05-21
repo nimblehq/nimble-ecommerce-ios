@@ -30,7 +30,7 @@ struct SuggestedView: View {
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 386.0)
 
-            Image("product-cube")
+            Image("dummy-tshirt/product-cube")
                 .offset(x: 45.0, y: 45.0)
         }
     }

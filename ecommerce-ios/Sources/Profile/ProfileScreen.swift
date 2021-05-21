@@ -23,7 +23,7 @@ struct ProfileScreen: View {
                         viewModel: .init(
                             fullName: "Joseph Edmed",
                             email: "josephed@mail.com",
-                            imageString: "avatar-large-icon"
+                            imageString: "dummy-other/avatar-large-icon"
                         )
                     )
                     ForEach(sectionViewModels) { sectionViewModel in

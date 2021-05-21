@@ -24,7 +24,7 @@ extension ProductSectionViewModel {
              let cellVM = ProductCellViewModel(
                 id: index,
                 name: "Pink cube",
-                imageString: "screen-search-result-tshirt/tshirt-cube-pink",
+                imageString: "dummy-tshirt/tshirt-cube-pink",
                 price: 10_000,
                 currency: "฿"
             )
