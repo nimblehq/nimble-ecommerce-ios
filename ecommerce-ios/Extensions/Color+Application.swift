@@ -37,6 +37,9 @@ extension Color {
     /// #EFEFEF
     static var galleryGray: Color { Color(hex: 0xEFEFEF) }
 
+    /// #F9FBFD Gray 100
+    static var blackSqueeze: Color { Color(hex: 0xF9FBFD) }
+
     // MARK: - Violet
 
     /// #534ACC
