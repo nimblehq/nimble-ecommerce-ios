@@ -16,6 +16,7 @@ struct LargeWidgetTitleViewModel: Identifiable {
     var price: Double
     var currency: String
     var promotionText: String?
+    let productURL: URL
 
     var formattedPrice: String {
         "\(currency)\(price.formatted(with: .currencyWithNoDecimalDigit))"
@@ -27,6 +28,7 @@ struct LargeWidgetTitleViewModel: Identifiable {
         imageString = product.imageString
         price = Double(product.price.amount)
         currency = product.price.currency
+        productURL = product.widgetURL
         self.promotionText = promotionText
     }
 }
@@ -36,16 +38,24 @@ struct LargeWidgetTitleView: View {
     let viewModel: LargeWidgetTitleViewModel
 
     var body: some View {
-        HStack(alignment: .lastTextBaseline, spacing: 16.0) {
-            ItemView(
-                item: ItemViewModel(
-                    id: viewModel.id,
+        Link(destination: viewModel.productURL) {
+            HStack(alignment: .lastTextBaseline, spacing: 16.0) {
+                ItemView(
+                    item: ItemViewModel(
+                        id: viewModel.id,
+                        name: viewModel.name,
+                        imageString: viewModel.imageString
+                    )
+                )
+                .aspectRatio(1.0, contentMode: .fit)
+                ItemdescriptionView(
                     name: viewModel.name,
-                    imageString: viewModel.imageString
+                    price: viewModel.formattedPrice,
+                    promotion: viewModel.promotionText
                 )
             )
             .aspectRatio(1.0, contentMode: .fit)
-            ItemDescritionView(
+            ItemdescriptionView(
                 name: viewModel.name,
                 price: viewModel.formattedPrice,
                 promotion: viewModel.promotionText

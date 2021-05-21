@@ -12,7 +12,7 @@ struct ProductInformationViewModel: Identifiable {
     let productCategory: String
     let imageString: String
     let price: Price
-    let descrition: String
+    let description: String
 }
 
 extension ProductInformationViewModel {
@@ -24,7 +24,7 @@ extension ProductInformationViewModel {
             productCategory: "cube",
             imageString: "dummy-tshirt/tshirt",
             price: Price(id: "price", amount: 10_000, currency: "฿"),
-            descrition: """
+            description: """
             The design of Pink Cube was inspired by amazing box. Owning this piece grants the following stats:
 
             Charisma +10
