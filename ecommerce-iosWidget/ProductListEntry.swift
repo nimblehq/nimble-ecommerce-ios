@@ -22,6 +22,7 @@ extension WidgetProduct {
     static var placeholder: [WidgetProduct] {
         Array(WidgetProduct.searchResultItems.prefix(5))
     }
+    
     static var placeholderItem: WidgetProduct {
         WidgetProduct(
             id: 1,

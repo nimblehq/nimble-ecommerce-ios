@@ -17,6 +17,10 @@ struct LargeWidgetTitleViewModel: Identifiable {
     var currency: String
     var promotionText: String
 
+    var formattedPrice: String {
+        "\(currency)\(price.formatted(with: .currencyWithNoDecimalDigit))"
+    }
+
     init(product: WidgetProduct, promotionText: String) {
         id = product.id
         name = product.name.capitalized
@@ -24,10 +28,6 @@ struct LargeWidgetTitleViewModel: Identifiable {
         price = Double(product.price.amount)
         currency = product.price.currency
         self.promotionText = promotionText
-    }
-
-    var formattedPrice: String {
-        "\(currency)\(price.formatted(with: .currencyWithNoDecimalDigit))"
     }
 }
 

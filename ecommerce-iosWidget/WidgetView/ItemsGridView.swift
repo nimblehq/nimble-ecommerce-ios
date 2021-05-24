@@ -16,7 +16,7 @@ struct ItemsGridView: View {
 
     var body: some View {
         LazyVGrid(columns: columns, spacing: 15.0) {
-            ForEach(items, id: \.id) { item in
+            ForEach(items) { item in
                 ItemView(item: item)
                     .aspectRatio(1.0, contentMode: .fit)
             }
