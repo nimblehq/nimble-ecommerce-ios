@@ -20,7 +20,7 @@ struct ProductListEntry: TimelineEntry {
 extension WidgetProduct {
 
     static var placeholder: [WidgetProduct] {
-        Array(WidgetProduct.searchResultItems.prefix(5))
+        WidgetProduct.searchResultItems
     }
     
     static var placeholderItem: WidgetProduct {

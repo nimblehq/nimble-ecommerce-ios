@@ -17,6 +17,7 @@ struct ItemViewModel: Identifiable {
     static var placeholder: [ItemViewModel] {
         WidgetProduct.placeholder.map(ItemViewModel.init)
     }
+    
     static var itemPlaceholder: ItemViewModel {
         ItemViewModel(
             product: .placeholderItem
