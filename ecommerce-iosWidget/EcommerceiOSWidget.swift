@@ -41,6 +41,8 @@ struct EcommerceiOSWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: ProductListProvider()) { entry in
             EcommerceiOSWidgetEntryView(entry: entry)
+                .environment(\.colorScheme, .light)
+                .background(Color.white)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
