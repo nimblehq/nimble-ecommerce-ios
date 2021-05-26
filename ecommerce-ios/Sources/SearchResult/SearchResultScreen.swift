@@ -44,7 +44,7 @@ struct SearchResultScreen: View {
             CustomNavigationBarLargeTitleView(
                 titleView: {
                     Text(viewModel.name.capitalized)
-                        .font(.largeTitle.bold())
+                        .font(.largeNavigationBarTitle)
                 },
                 trailingView: {
                     Button("Filter(1)") {
@@ -67,7 +67,7 @@ struct SearchResultScreen: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .accentColor(.mainBlue)
+        .accentColor(.indigoViolet)
     }
 }
 
