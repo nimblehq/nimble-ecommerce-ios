@@ -19,6 +19,7 @@ struct SearchBarView: View {
                     .padding()
 
                 TextField("Search", text: $searchKeyword)
+                    .font(.mediumDescription)
                     .padding(.vertical)
 
                 Color.clear
