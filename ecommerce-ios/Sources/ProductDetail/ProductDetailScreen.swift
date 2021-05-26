@@ -30,14 +30,14 @@ struct ProductDetailScreen: View {
 
     private func titleText(_ title: String) -> some View {
         VStack(spacing: 0.0) {
-            Color.blackAlpha2
+            Color.altoGray
                 .frame(height: 1.0)
                 .padding(.horizontal, 20.0)
                 .padding(.top, 30.0)
                 .padding(.bottom, 20.0)
             HStack {
                 Text(title.capitalized)
-                    .font(.system(size: 22.0).weight(.bold))
+                    .font(.headlineTitle)
                     .foregroundColor(.charadeGray)
                     .padding(.horizontal, 16.0)
                 Spacer()

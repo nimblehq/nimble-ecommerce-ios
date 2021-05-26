@@ -22,12 +22,12 @@ struct SizeSelectionView: View {
 
     private var grayGoundRectangle: some View {
         RoundedRectangle(cornerRadius: 8.0)
-            .stroke(Color.blackAlpha12, lineWidth: 1.0)
+            .stroke(Color.altoGray, lineWidth: 1.0)
     }
 
     private var blueRoundRectangle: some View {
         RoundedRectangle(cornerRadius: 8.0)
-            .stroke(Color.mainBlue, lineWidth: 1.0)
+            .stroke(Color.indigoViolet, lineWidth: 1.0)
     }
 
     var body: some View {

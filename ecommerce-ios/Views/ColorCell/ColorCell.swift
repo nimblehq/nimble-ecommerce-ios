@@ -20,7 +20,7 @@ struct ColorCell: View {
                         .frame(width: 24.0, height: 24.0)
                     Text(viewModel.name.capitalized)
                         .foregroundColor(.charadeGray)
-                        .font(.system(size: 13.0))
+                        .font(.smallDescription)
                 }
             }
             .contentShape(Rectangle())
