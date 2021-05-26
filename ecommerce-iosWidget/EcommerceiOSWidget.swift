@@ -18,7 +18,10 @@ struct EcommerceiOSWidgetEntryView: View {
         let itemViewModels = Array(entry.products.map(ItemViewModel.init).prefix(family.maxCount))
         switch family {
         case .systemSmall:
-            SmallWidgetView()
+            SmallWidgetView(
+                viewModel: ItemViewModel(product: entry.topItem),
+                promotionText: entry.promotionText
+            )
         case .systemLarge:
             LargeWidgetView(
                 titleViewModel: LargeWidgetTitleViewModel(
