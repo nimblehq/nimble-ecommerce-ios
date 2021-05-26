@@ -60,7 +60,9 @@ struct SearchResultScreen: View {
 
             LazyVGrid(columns: columns, spacing: spacing) {
                 ForEach(cellVỉewModels) { viewModel in
-                    ProductCell(viewModel: viewModel)
+                    NavigationLink(destination: ProductDetailScreen()) {
+                        ProductCell(viewModel: viewModel)
+                    }
                 }
             }
         }
