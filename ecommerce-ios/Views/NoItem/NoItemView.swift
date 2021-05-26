@@ -17,7 +17,8 @@ struct NoItemView: View {
                 .aspectRatio(1.117, contentMode: .fit)
                 .frame(maxWidth: 100.0)
             Text(viewModel.description)
-                .foregroundColor(.charadeGrayAlpha4)
+                .foregroundColor(.silverChaliceGray)
+                .font(.mediumDescription)
                 .multilineTextAlignment(.center)
         }
     }
