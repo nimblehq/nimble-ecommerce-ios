@@ -17,7 +17,7 @@ struct FilterCell: View {
 
             HStack(spacing: 14.0) {
                 Text(viewModel.capitalized)
-                    .font(.system(size: 17.0, weight: .regular))
+                    .font(.mediumDescription)
                     .foregroundColor(.charadeGray)
 
                 Spacer()
@@ -30,7 +30,7 @@ struct FilterCell: View {
 
             Spacer()
 
-            Color.blackAlpha2
+            Color.altoGray
                 .frame(height: 1.0)
                 .padding(.leading, 16.0)
         }

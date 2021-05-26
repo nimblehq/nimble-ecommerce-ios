@@ -17,12 +17,12 @@ struct SortCell: View {
 
             HStack(spacing: 13.0) {
                 Text(viewModel.title)
-                    .foregroundColor(Color.charadeGray)
-                    .font(.system(size: 17.0, weight: .regular))
+                    .font(.mediumDescription)
+                    .foregroundColor(.charadeGray)
 
                 Text(viewModel.subtitle)
-                    .foregroundColor(Color.blackAlpha2)
-                    .font(.system(size: 17.0, weight: .regular))
+                    .font(.mediumDescription)
+                    .foregroundColor(.silverChaliceGray)
 
                 Spacer()
             }
@@ -30,7 +30,7 @@ struct SortCell: View {
 
             Spacer()
 
-            Color.blackAlpha2
+            Color.altoGray
                 .frame(height: 1.0)
                 .padding(.leading, 16.0)
         }

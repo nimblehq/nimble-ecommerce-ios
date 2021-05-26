@@ -32,10 +32,10 @@ struct FilterScreen: View {
                 action: { print("did tap view results button") },
                 label: {
                     Text("View results")
-                        .font(.system(size: 17.0).weight(.semibold))
+                        .font(.smallTitle)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, minHeight: 50.0)
-                        .background(Color.mainBlue)
+                        .background(Color.indigoViolet)
                         .cornerRadius(10.0)
                 }
             )
@@ -48,13 +48,13 @@ struct FilterScreen: View {
             }) {
                 Text("Close")
             }
-            .foregroundColor(.mainBlue),
+            .foregroundColor(.indigoViolet),
             trailing: Button(action: {
                 print("did tap reset button")
             }) {
                 Text("Reset")
             }
-            .foregroundColor(.mainBlue)
+            .foregroundColor(.indigoViolet)
         )
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -63,7 +63,7 @@ struct FilterScreen: View {
         HStack {
             Text(title.capitalized)
                 .foregroundColor(Color.charadeGray)
-                .font(.system(size: 22.0, weight: .bold))
+                .font(.headlineTitle)
                 .padding(.vertical, 8.0)
             Spacer()
         }
