@@ -58,12 +58,12 @@ struct ProductInformationView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailingView: {
             HStack(spacing: 10.0) {
-                Button(action: { print("did tap favorite button") }) {
+                Button(action: { print("did tap favorite button") } ) {
                     Image("common-icon/icon-favorite-light")
                         .frame(width: 44.0, height: 44.0)
                 }
 
-                Button(action: { print("did tap share button") }) {
+                Button(action: { print("did tap share button") } ) {
                     Image("common-icon/icon-share")
                         .frame(width: 44.0, height: 44.0)
                 }

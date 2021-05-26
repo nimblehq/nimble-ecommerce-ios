@@ -24,7 +24,7 @@ struct TabbarView: View {
         }
         .accentColor(.indigoViolet)
         .onOpenURL { _ in
-            selection = 1
+            selection = Constants.TabBar.search.rawValue
         }
     }
 }
