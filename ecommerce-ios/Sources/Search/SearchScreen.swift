@@ -49,7 +49,7 @@ struct SearchScreen: View {
                 LazyVGrid(columns: columns, spacing: spacing) {
                     ForEach(searchResultCellViewModels) { viewModel in
                         NavigationLink(
-                            destination: searchResultScreen(viewModel),
+                            destination: searchResultScreen(),
                             tag: viewModel.id,
                             selection: $deeplinkedId) {
                             SearchItemCell(viewModel: viewModel)
@@ -65,8 +65,11 @@ struct SearchScreen: View {
         }
     }
 
-    private func searchResultScreen(_ viewModel: SearchItemCellViewModel) -> some View {
-        SearchResultScreen(viewModel: .init(id: "\(viewModel.id)", name: viewModel.name))
+    private func searchResultScreen() -> some View {
+        guard let deeplinkedId = deeplinkedId,
+              let productInformationViewModel = ProductInformationViewModel(id: deeplinkedId)
+        else { return ProductInformationView(viewModel: .productInformation) }
+        return ProductInformationView(viewModel: productInformationViewModel)
     }
 }
 
