@@ -21,8 +21,8 @@ struct SettingsCell: View {
                         .frame(maxWidth: 23.0, maxHeight: 23.0)
                 }
             Text(viewModel.settingName)
-                .font(.system(size: 17.0, weight: .regular))
-                .foregroundColor(.mineShaftGray)
+                .font(.mediumDescription)
+                .foregroundColor(.charadeGray)
             Spacer()
             Image("common-icon/icon-disclosure")
                 .scaledToFill()
