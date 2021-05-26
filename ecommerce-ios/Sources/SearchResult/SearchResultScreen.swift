@@ -16,13 +16,13 @@ struct SearchResultScreen: View {
     private let numberOfColumns = 2
     private let spacing: CGFloat = 17.0
 
-    private let cellVỉewModels: [ProductCellViewModel] = {
+    private let cellViewModels: [ProductCellViewModel] = {
         #warning("implement mock view model for product")
         var vms: [ProductCellViewModel] = []
         for item in SearchResultItem.searchResultItems {
             vms.append(
                 ProductCellViewModel(
-                    id: item.id,
+                    id: "\(item.id)",
                     name: item.name,
                     imageString: item.imageString,
                     price: 1_000,
@@ -59,7 +59,7 @@ struct SearchResultScreen: View {
             )
 
             LazyVGrid(columns: columns, spacing: spacing) {
-                ForEach(cellVỉewModels) { viewModel in
+                ForEach(cellViewModels) { viewModel in
                     NavigationLink(destination: ProductDetailScreen()) {
                         ProductCell(viewModel: viewModel)
                     }

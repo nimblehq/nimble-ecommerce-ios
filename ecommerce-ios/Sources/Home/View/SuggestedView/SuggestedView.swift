@@ -9,17 +9,16 @@ import SwiftUI
 
 struct SuggestedView: View {
 
-    private let product = Product(
-        id: "product1",
-        name: "Poly Cube 2021",
-        imageName: "",
-        price: Price(id: "price1", amount: 8_000, currency: "฿")
-    )
+    let product: Product
+    var shopAction: (() -> Void)?
 
     var body: some View {
         ZStack {
             backgroundView
             contentView
+        }
+        .onTapGesture {
+            shopAction?()
         }
         .clipped()
     }
@@ -68,14 +67,14 @@ struct SuggestedView: View {
                 Text("\(product.name)")
                     .foregroundColor(.white)
                     .font(.smallTitle)
-                Text("From \(product.price.currency)\(product.price.amount)")
+                Text("From \(product.formattedPrice)")
                     .foregroundColor(.white)
                     .font(.smallDescription)
             }
 
             Spacer()
             Button("SHOP") {
-                print("Did tap shop button")
+                shopAction?()
             }
             .font(.system(size: 15).bold())
             .frame(width: 74.0, height: 30.0)
@@ -90,7 +89,7 @@ struct SuggestedView: View {
 struct SuggestedView_Previews: PreviewProvider {
 
     static var previews: some View {
-        SuggestedView()
+        SuggestedView(product: Product.suggestedProduct)
             .frame(width: UIScreen.main.bounds.width, height: 386.0)
     }
 }

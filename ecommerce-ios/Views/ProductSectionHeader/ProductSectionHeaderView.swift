@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductSectionHeaderView: View {
 
     let viewModel: ProductSectionHeaderViewViewModel
+    var selectedShop: (() -> Void)?
 
     var body: some View {
         HStack {
@@ -18,7 +19,7 @@ struct ProductSectionHeaderView: View {
                 .foregroundColor(.charadeGray)
             Spacer()
             Button("Shop all") {
-                print("Did tap shop all button")
+                selectedShop?()
             }
             .font(.system(size: 15.0))
             .foregroundColor(.indigoViolet)

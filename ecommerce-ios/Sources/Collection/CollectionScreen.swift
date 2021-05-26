@@ -48,7 +48,7 @@ struct CollectionScreen: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .accentColor(.mainBlue)
+        .accentColor(.darkBlue)
     }
 }
 

@@ -47,7 +47,7 @@ struct ProductCell_Previews: PreviewProvider {
     static var previews: some View {
         ProductCell(
             viewModel: ProductCellViewModel(
-                id: 1,
+                id: "1",
                 name: "Pink cube",
                 imageString: "dummy-tshirt/tshirt-cube-pink",
                 price: 10_000,
