@@ -50,7 +50,7 @@ struct LargeWidgetView_Previews: PreviewProvider {
                 product: .placeholderItem,
                 promotionText: "POPULAR"
             ),
-            itemViewModels: Array(ItemViewModel.placeholder.prefix(4))
+            itemViewModels: Array(ItemViewModel.placeholder.prefix(3))
         )
         .previewContext(WidgetPreviewContext(family: .systemLarge))
     }

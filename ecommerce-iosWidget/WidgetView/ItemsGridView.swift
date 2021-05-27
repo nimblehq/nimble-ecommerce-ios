@@ -23,7 +23,8 @@ struct ItemsGridView: View {
                     .aspectRatio(1.0, contentMode: .fit)
             }
             ForEach(0..<spacingItems(currentItems: items.count)) { _ in
-                Spacer()                    .aspectRatio(1.0, contentMode: .fit)
+                Spacer()
+                    .aspectRatio(1.0, contentMode: .fit)
             }
         }
     }
