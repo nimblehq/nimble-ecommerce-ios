@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ItemsGridView: View {
 
+    @Environment(\.widgetFamily) var family
+
     var items: [ItemViewModel]
 
     let columns = Array(repeating: GridItem(.flexible()), count: 4)
@@ -20,14 +22,21 @@ struct ItemsGridView: View {
                 ItemView(item: item)
                     .aspectRatio(1.0, contentMode: .fit)
             }
+            ForEach(0..<spacingItems(currentItems: items.count)) { _ in
+                Spacer()                    .aspectRatio(1.0, contentMode: .fit)
+            }
         }
+    }
+
+    private func spacingItems(currentItems: Int) -> Int {
+        return max(family.maxCount - currentItems, 0)
     }
 }
 
 struct ItemsGridView_Previews: PreviewProvider {
 
     static var previews: some View {
-        ItemsGridView(items: ItemViewModel.placeholder)
+        ItemsGridView(items: Array(ItemViewModel.placeholder.prefix(3)))
             .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
