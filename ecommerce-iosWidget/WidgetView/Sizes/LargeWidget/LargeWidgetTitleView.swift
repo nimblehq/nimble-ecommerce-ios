@@ -15,13 +15,13 @@ struct LargeWidgetTitleViewModel: Identifiable {
     var imageString: String
     var price: Double
     var currency: String
-    var promotionText: String
+    var promotionText: String?
 
     var formattedPrice: String {
         "\(currency)\(price.formatted(with: .currencyWithNoDecimalDigit))"
     }
 
-    init(product: WidgetProduct, promotionText: String) {
+    init(product: WidgetProduct, promotionText: String?) {
         id = product.id
         name = product.name.capitalized
         imageString = product.imageString
@@ -50,6 +50,7 @@ struct LargeWidgetTitleView: View {
                 price: viewModel.formattedPrice,
                 promotion: viewModel.promotionText
             )
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }

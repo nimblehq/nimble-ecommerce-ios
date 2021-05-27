@@ -30,6 +30,14 @@ struct EcommerceiOSWidgetEntryView: View {
                 ),
                 itemViewModels: itemViewModels
             )
+        case .systemMedium:
+            LargeWidgetView(
+                titleViewModel: LargeWidgetTitleViewModel(
+                    product: entry.topItem,
+                    promotionText: nil
+                ),
+                itemViewModels: itemViewModels
+            )
         default:
             Text(entry.date, style: .time)
         }
