@@ -330,6 +330,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		09A08338265F4D5D004098A6 /* Sizes */ = {
+			isa = PBXGroup;
+			children = (
+				090763552657558800E9D946 /* LargeWidget */,
+				09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */,
+			);
+			path = Sizes;
+			sourceTree = "<group>";
+		};
 		09A702F6265254B500B8BDE6 /* ecommerce-iosWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,10 +357,9 @@
 		09A70306265371FC00B8BDE6 /* WidgetView */ = {
 			isa = PBXGroup;
 			children = (
-				090763552657558800E9D946 /* LargeWidget */,
+				09A08338265F4D5D004098A6 /* Sizes */,
 				09A70307265371FC00B8BDE6 /* ItemView.swift */,
 				0907635A265755D600E9D946 /* LogoView.swift */,
-				09A70309265371FC00B8BDE6 /* SmallWidgetView.swift */,
 				09A7030A265371FC00B8BDE6 /* ItemsGridView.swift */,
 				0907635C265755E200E9D946 /* ItemDescritionView.swift */,
 			);
