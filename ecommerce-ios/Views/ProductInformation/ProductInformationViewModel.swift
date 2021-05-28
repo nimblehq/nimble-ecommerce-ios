@@ -25,7 +25,7 @@ extension ProductInformationViewModel {
         productCategory = "cube"
         price = searchResultItem.price
         imageString = searchResultItem.imageString
-        descrition = ""
+        description = ""
     }
 
     static var productInformation: ProductInformationViewModel {

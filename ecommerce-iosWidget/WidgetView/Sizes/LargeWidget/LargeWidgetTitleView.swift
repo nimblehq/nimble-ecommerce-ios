@@ -48,19 +48,13 @@ struct LargeWidgetTitleView: View {
                     )
                 )
                 .aspectRatio(1.0, contentMode: .fit)
-                ItemdescriptionView(
+                ItemDescriptionView(
                     name: viewModel.name,
                     price: viewModel.formattedPrice,
                     promotion: viewModel.promotionText
                 )
-            )
-            .aspectRatio(1.0, contentMode: .fit)
-            ItemdescriptionView(
-                name: viewModel.name,
-                price: viewModel.formattedPrice,
-                promotion: viewModel.promotionText
-            )
-            .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
     }
 }
