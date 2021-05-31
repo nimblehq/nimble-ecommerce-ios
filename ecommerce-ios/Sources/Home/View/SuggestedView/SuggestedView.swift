@@ -53,12 +53,12 @@ struct SuggestedView: View {
         VStack(alignment: .leading) {
             Text("SUGGESTED FOR YOU")
                 .foregroundColor(.gray)
-                .font(.system(size: 13).bold())
+                .font(.system(size: 13, weight: .bold))
             Text("\(product.name) Collection")
                 .multilineTextAlignment(.leading)
                 .padding(.top, 4.0)
                 .foregroundColor(.white)
-                .font(.system(size: 34).bold())
+                .font(.system(size: 34, weight: .bold))
         }
     }
 
@@ -67,10 +67,10 @@ struct SuggestedView: View {
             VStack(alignment: .leading) {
                 Text("\(product.name)")
                     .foregroundColor(.white)
-                    .font(.system(size: 17).bold())
+                    .font(.smallTitle)
                 Text("From \(product.price.currency)\(product.price.amount)")
                     .foregroundColor(.white)
-                    .font(.system(size: 13))
+                    .font(.smallDescription)
             }
 
             Spacer()
@@ -80,7 +80,7 @@ struct SuggestedView: View {
             .font(.system(size: 15).bold())
             .frame(width: 74.0, height: 30.0)
             .foregroundColor(.white)
-            .background(Color.purpleBlue)
+            .background(Color.indigoViolet)
             .cornerRadius(17.0)
         }
         .padding(.top, 10.0)

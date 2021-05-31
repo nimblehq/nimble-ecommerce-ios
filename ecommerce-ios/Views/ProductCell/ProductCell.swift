@@ -18,10 +18,10 @@ struct ProductCell: View {
                     .resizable()
                     .aspectRatio(1.108, contentMode: .fit)
                 Text(viewModel.name.capitalized)
-                    .font(.headline)
+                    .font(.smallTitle)
                     .foregroundColor(.charadeGray)
                 Text(viewModel.formattedPrice)
-                    .font(.footnote)
+                    .font(.smallDescription)
                     .foregroundColor(.charadeGray)
             }
             Rectangle()

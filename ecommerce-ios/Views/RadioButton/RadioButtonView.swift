@@ -15,11 +15,11 @@ struct RadioButtonView: View {
         ZStack {
             if viewModel {
                 Circle()
-                    .fill(Color.mainBlue)
+                    .fill(Color.indigoViolet)
                     .frame(width: 14.0, height: 14.0)
             }
             Circle()
-                .stroke(Color.mainBlue, lineWidth: 1.0)
+                .stroke(Color.indigoViolet, lineWidth: 1.0)
                 .frame(width: 24.0, height: 24.0)
         }
     }

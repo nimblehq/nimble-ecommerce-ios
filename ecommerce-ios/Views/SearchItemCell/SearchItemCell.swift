@@ -18,11 +18,11 @@ struct SearchItemCell: View {
                 .aspectRatio(1.108, contentMode: .fit)
                 .padding()
             Text(viewModel.name.capitalized)
-                .font(.headline)
+                .font(.smallTitle)
                 .foregroundColor(.charadeGray)
             Text(viewModel.numberOfItemsString)
-                .font(.footnote)
-                .foregroundColor(.charadeGrayAlpha4)
+                .font(.smallDescription)
+                .foregroundColor(.silverChaliceGray)
         }
     }
 }

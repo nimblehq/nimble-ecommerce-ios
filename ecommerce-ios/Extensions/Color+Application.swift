@@ -11,28 +11,19 @@ extension Color {
 
     // MARK: - Blue
 
-    /// 0x534ACC
-    static let mainBlue: Color = .init(hex: 0x534ACC)
-
     /// 0x201547
     static let darkBlue: Color = .init(hex: 0x201547)
 
-    /// 0x534ACC
-    static let purpleBlue: Color = .init(hex: 0x534ACC)
-
     // MARK: - Gray
 
-    /// #292A33 Gray 900
+    /// #292A33
     static var charadeGray: Color { Color(hex: 0x292A33) }
 
-    /// #292A33 Gray 900 with alpha 0.4
-    static var charadeGrayAlpha4: Color { Color(hex: 0x292A33, alpha: 0.4) }
+    /// #A9A9A9
+    static var silverChaliceGray: Color { Color(hex: 0xA9A9A9) }
 
-    /// #292A33 Gray 900 with alpha 0.7
-    static var charadeGrayAlpha7: Color { Color(hex: 0x292A33, alpha: 0.7) }
-
-    /// #DADADA
-    static var altoGray: Color { Color(hex: 0xDADADA) }
+    /// #0xD4D4D4
+    static var altoGray: Color { Color(hex: 0xD4D4D4) }
 
     /// #EFEFEF
     static var galleryGray: Color { Color(hex: 0xEFEFEF) }
@@ -40,21 +31,10 @@ extension Color {
     /// #F9FBFD Gray 100
     static var blackSqueeze: Color { Color(hex: 0xF9FBFD) }
 
-    /// #252525
-    static var mineShaftGray: Color { Color(hex: 0x252525) }
-
     // MARK: - Violet
 
     /// #534ACC
     static var indigoViolet: Color { Color(hex: 0x534ACC) }
-
-    // MARK: - Black
-
-    /// #000000 Black with alpha 0.2
-    static var blackAlpha2: Color { Color(hex: 0x000000, alpha: 0.2) }
-
-    /// #000000 Black with alpha 0.12
-    static var blackAlpha12: Color { Color(hex: 0x000000, alpha: 0.12) }
 
     // MARK: - Initialize
 

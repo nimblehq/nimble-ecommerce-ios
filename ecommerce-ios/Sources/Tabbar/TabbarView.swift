@@ -22,7 +22,7 @@ struct TabbarView: View {
             ProfileScreen()
                 .withTabbar($selection, tab: .profile)
         }
-        .accentColor(.mainBlue)
+        .accentColor(.indigoViolet)
     }
 }
 
