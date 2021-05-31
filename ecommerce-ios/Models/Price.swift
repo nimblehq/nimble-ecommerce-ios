@@ -10,6 +10,10 @@ import Foundation
 struct Price: Identifiable {
 
     let id: String
-    let amount: Int
+    let amount: Double
     let currency: String
+
+    var formattedPrice: String {
+        "\(currency)\(amount.formatted(with: .currencyWithNoDecimalDigit))"
+    }
 }

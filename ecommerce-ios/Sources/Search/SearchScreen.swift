@@ -14,7 +14,7 @@ struct SearchScreen: View {
     private let numberOfColumns = 2
     private let spacing: CGFloat = 17.0
 
-    private let cellVỉewModels: [SearchItemCellViewModel] = {
+    private let cellViewModels: [SearchItemCellViewModel] = {
         var vms: [SearchItemCellViewModel] = []
         for searchItem in SearchItem.searchItems {
             vms.append(
@@ -30,7 +30,7 @@ struct SearchScreen: View {
     }()
 
     private var searchResultCellViewModels: [SearchItemCellViewModel] {
-        searchKeyword.trimmed.isEmpty ? cellVỉewModels : cellVỉewModels.filter {
+        searchKeyword.trimmed.isEmpty ? cellViewModels : cellViewModels.filter {
             $0.name.lowercased().contains(searchKeyword.lowercased())
         }
     }

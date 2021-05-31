@@ -22,11 +22,8 @@ extension ProductSectionViewModel {
         var cellVMs: [ProductCellViewModel] = []
         for index in 0..<collection.numberOfItems {
              let cellVM = ProductCellViewModel(
-                id: index,
-                name: "Pink cube",
-                imageString: "dummy-tshirt/tshirt-cube-pink",
-                price: 10_000,
-                currency: "฿"
+                id: "\(index)",
+                product: Product.products.first ?? Product.suggestedProduct
             )
             cellVMs.append(cellVM)
         }

@@ -17,38 +17,16 @@ extension SearchResultItem {
 
     static var searchResultItems: [SearchResultItem] {
         var items: [SearchResultItem] = []
-        for (index, cubeType) in CubeType.allCases.enumerated() {
+        for (index, item) in Product.products.enumerated() {
             items.append(
                 SearchResultItem(
                     id: index,
-                    name: cubeType.name,
-                    imageString: cubeType.imageName,
-                    price: Price(id: "\(index)", amount: index * 1_000, currency: "฿")
+                    name: item.name,
+                    imageString: item.imageName,
+                    price: item.price
                 )
             )
         }
         return items
-    }
-}
-
-private enum CubeType: String, CaseIterable {
-
-    case gray, pink, indigo, honey, gray1, pink1, indigo1, honey1
-
-    var value: String {
-        switch self {
-        case .gray, .gray1: return "gray"
-        case .pink, .pink1: return "pink"
-        case .indigo, .indigo1: return "indigo"
-        case .honey, .honey1: return "honey"
-        }
-    }
-
-    var name: String {
-        "\(value) cube"
-    }
-
-    var imageName: String {
-        "dummy-tshirt/tshirt-cube-\(value)"
     }
 }

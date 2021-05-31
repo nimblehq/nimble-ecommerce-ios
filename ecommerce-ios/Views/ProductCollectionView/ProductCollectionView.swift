@@ -11,6 +11,8 @@ struct ProductCollectionView: View {
 
     let viewModel: ProductCollectionViewViewModel
 
+    var goToCollection: ((String) -> Void)?
+
     private let numberOfColumns: Int = 2
     private let spacing: CGFloat = 17.0
 
@@ -24,11 +26,15 @@ struct ProductCollectionView: View {
         return LazyVStack {
             ForEach(sections) { section in
                 VStack {
-                    ProductSectionHeaderView(viewModel: .init(title: section.title))
+                    ProductSectionHeaderView(viewModel: .init(title: section.title)) {
+                        goToCollection?(section.title)
+                    }
 
                     LazyVGrid(columns: columns, spacing: spacing) {
                         ForEach(section.cellViewModels) { cellVM in
-                            ProductCell(viewModel: cellVM)
+                            NavigationLink(destination: ProductDetailScreen()) {
+                                ProductCell(viewModel: cellVM)
+                            }
                         }
                     }
                     .padding(.vertical, 10.0)
