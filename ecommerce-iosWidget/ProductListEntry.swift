@@ -19,6 +19,11 @@ struct ProductListEntry: TimelineEntry {
 
 extension WidgetProduct {
 
+    var widgetURL: URL {
+        let urlString = "\(id)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        return URL(string: "\(DeeplinkUtility.deeplinkScheme)\(urlString)") ?? URL(fileURLWithPath: "")
+    }
+
     static var placeholder: [WidgetProduct] {
         WidgetProduct.searchResultItems
     }

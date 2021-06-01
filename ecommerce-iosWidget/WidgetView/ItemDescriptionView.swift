@@ -1,5 +1,5 @@
 //
-//  ItemDescritionView.swift
+//  ItemDescriptionView.swift
 //  ecommerce-iosWidgetExtension
 //
 //  Created by Bliss on 18/5/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 import WidgetKit
 
-struct ItemDescritionView: View {
+struct ItemDescriptionView: View {
 
     let name: String
     let price: String
@@ -30,10 +30,10 @@ struct ItemDescritionView: View {
     }
 }
 
-struct ItemDescritionView_Previews: PreviewProvider {
+struct ItemDescriptionView_Previews: PreviewProvider {
 
     static var previews: some View {
-        ItemDescritionView(
+        ItemDescriptionView(
             name: "Name",
             price: "Price",
             promotion: "Promotion"

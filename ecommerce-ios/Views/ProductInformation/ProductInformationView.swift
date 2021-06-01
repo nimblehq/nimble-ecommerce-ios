@@ -49,7 +49,7 @@ struct ProductInformationView: View {
                 Text("About")
                     .font(.headlineTitle)
                     .foregroundColor(.charadeGray)
-                Text(viewModel.descrition)
+                Text(viewModel.description)
                     .font(.mediumDescription)
                     .foregroundColor(.silverChaliceGray)
             }

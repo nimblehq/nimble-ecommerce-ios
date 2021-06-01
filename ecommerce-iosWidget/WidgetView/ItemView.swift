@@ -13,6 +13,7 @@ struct ItemViewModel: Identifiable {
     let id: Int
     let name: String
     let imageString: String
+    var productURL: URL = URL(fileURLWithPath: "")
 
     static var placeholder: [ItemViewModel] {
         WidgetProduct.placeholder.map(ItemViewModel.init)
@@ -31,6 +32,7 @@ extension ItemViewModel {
         id = product.id
         name = product.name
         imageString = product.imageString
+        productURL = product.widgetURL
     }
 }
 

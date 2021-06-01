@@ -23,6 +23,9 @@ struct TabbarView: View {
                 .withTabbar($selection, tab: .profile)
         }
         .accentColor(.indigoViolet)
+        .onOpenURL { _ in
+            selection = Constants.TabBar.search.rawValue
+        }
     }
 }
 
