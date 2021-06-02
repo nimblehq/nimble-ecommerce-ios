@@ -881,8 +881,8 @@
 				909562AF2643F2FC0028E442 /* Extensions */,
 				224CB004264C3F5C0084B50B /* Helpers */,
 				224CB017264CE65E0084B50B /* Models */,
-				90D096232649316B00717D05 /* Views */,
 				90D907202643DD9400D37F16 /* Sources */,
+				90D096232649316B00717D05 /* Views */,
 			);
 			path = "ecommerce-ios";
 			sourceTree = "<group>";

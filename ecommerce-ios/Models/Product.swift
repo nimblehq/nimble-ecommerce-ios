@@ -60,7 +60,7 @@ extension Product {
                     id: "\(index)",
                     name: item.name,
                     imageName: item.imageName,
-                    price: Price(id: "\(index)", amount: Double(index) * 1_000.0, currency: "฿")
+                    price: Price(id: "\(index)", amount: Double(index + 1) * 1_000.0, currency: "฿")
                 )
             )
         }

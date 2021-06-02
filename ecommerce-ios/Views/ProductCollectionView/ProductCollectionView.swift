@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ProductCollectionView: View {
 
-    let viewModel: ProductCollectionViewViewModel
+    var viewModel: ProductCollectionViewViewModel
 
     var goToCollection: ((String) -> Void)?
+    var shouldLoadMore: (() -> Void)?
 
     private let numberOfColumns: Int = 2
     private let spacing: CGFloat = 17.0
@@ -21,10 +22,8 @@ struct ProductCollectionView: View {
     }
 
     var body: some View {
-        let sections = viewModel.sectionViewModels.filter { $0.cellViewModels.count != 0 }
-
-        return LazyVStack {
-            ForEach(sections) { section in
+        LazyVStack {
+            ForEach(viewModel.sectionViewModels) { section in
                 VStack {
                     ProductSectionHeaderView(viewModel: .init(title: section.title)) {
                         goToCollection?(section.title)
@@ -34,6 +33,11 @@ struct ProductCollectionView: View {
                         ForEach(section.cellViewModels) { cellVM in
                             NavigationLink(destination: ProductDetailScreen()) {
                                 ProductCell(viewModel: cellVM)
+                            }
+                            .onAppear {
+                                if cellVM.isLast {
+                                    shouldLoadMore?()
+                                }
                             }
                         }
                     }

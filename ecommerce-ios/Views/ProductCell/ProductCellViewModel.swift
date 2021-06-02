@@ -13,6 +13,7 @@ struct ProductCellViewModel: Identifiable {
     let price: Double
     let currency: String
 
+    var isLast: Bool = false
     var formattedPrice: String {
         "\(currency)\(price.formatted(with: .currencyWithNoDecimalDigit))"
     }
