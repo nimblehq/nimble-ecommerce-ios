@@ -52,9 +52,9 @@ struct HomeScreen: View {
                             collectionName = $0
                             gotoCollection = true
                         },
-                        shouldLoadMore: {
+                        didScrollToEnd: {
                             isLoading = true
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                                 isLoading = false
                             }
                         }

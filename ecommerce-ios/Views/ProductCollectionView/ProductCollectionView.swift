@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ProductCollectionView: View {
 
-    var viewModel: ProductCollectionViewViewModel
+    let viewModel: ProductCollectionViewViewModel
 
     var goToCollection: ((String) -> Void)?
-    var shouldLoadMore: (() -> Void)?
+    var didScrollToEnd: (() -> Void)?
 
     private let numberOfColumns: Int = 2
     private let spacing: CGFloat = 17.0
@@ -36,7 +36,7 @@ struct ProductCollectionView: View {
                             }
                             .onAppear {
                                 if cellVM.isLast {
-                                    shouldLoadMore?()
+                                    didScrollToEnd?()
                                 }
                             }
                         }
