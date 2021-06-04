@@ -17,7 +17,8 @@ struct CategoryView: View {
                 .resizable()
                 .frame(width: 70.0, height: 62.0)
             Text(category.name)
-                .font(.system(size: 13))
+                .font(.smallDescription)
+                .foregroundColor(.charadeGray)
         }
     }
 }

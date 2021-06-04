@@ -9,12 +9,13 @@ import SwiftUI
 
 struct SearchScreen: View {
 
-    @State var searchKeyword: String = ""
+    @State private var searchKeyword: String = ""
+    @State private var deeplinkedId: Int?
 
     private let numberOfColumns = 2
     private let spacing: CGFloat = 17.0
 
-    private let cellVỉewModels: [SearchItemCellViewModel] = {
+    private let cellViewModels: [SearchItemCellViewModel] = {
         var vms: [SearchItemCellViewModel] = []
         for searchItem in SearchItem.searchItems {
             vms.append(
@@ -30,7 +31,7 @@ struct SearchScreen: View {
     }()
 
     private var searchResultCellViewModels: [SearchItemCellViewModel] {
-        searchKeyword.trimmed.isEmpty ? cellVỉewModels : cellVỉewModels.filter {
+        searchKeyword.trimmed.isEmpty ? cellViewModels : cellViewModels.filter {
             $0.name.lowercased().contains(searchKeyword.lowercased())
         }
     }
@@ -47,7 +48,10 @@ struct SearchScreen: View {
                 SearchBarView(searchKeyword: $searchKeyword)
                 LazyVGrid(columns: columns, spacing: spacing) {
                     ForEach(searchResultCellViewModels) { viewModel in
-                        NavigationLink(destination: searchResultScreen(viewModel)) {
+                        NavigationLink(
+                            destination: searchResultScreen(),
+                            tag: viewModel.id,
+                            selection: $deeplinkedId) {
                             SearchItemCell(viewModel: viewModel)
                         }
                     }
@@ -56,24 +60,16 @@ struct SearchScreen: View {
             }
             .navigationBarTitle("Shop")
         }
+        .onOpenURL { url in
+            deeplinkedId = DeeplinkUtility.idFromURL(url)
+        }
     }
 
-    private func searchResultScreen(_ viewModel: SearchItemCellViewModel) -> some View {
-        SearchResultScreen(viewModel: .init(id: "\(viewModel.id)", name: viewModel.name))
-            .navigationTitle(viewModel.name.capitalized)
-            .navigationBarLargeTitle {
-                CustomNavigationBarLargeTitleView(
-                    titleView: {
-                        Text(viewModel.name.capitalized)
-                            .font(.largeTitle.bold())
-                    },
-                    trailingView: {
-                        Button("Filter(1)") {
-                            print("did tap filter button")
-                        }
-                    }
-                )
-            }
+    private func searchResultScreen() -> some View {
+        guard let deeplinkedId = deeplinkedId,
+              let productInformationViewModel = ProductInformationViewModel(id: deeplinkedId)
+        else { return ProductInformationView(viewModel: .productInformation) }
+        return ProductInformationView(viewModel: productInformationViewModel)
     }
 }
 

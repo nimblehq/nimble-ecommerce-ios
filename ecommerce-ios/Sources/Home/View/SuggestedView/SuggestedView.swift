@@ -9,17 +9,16 @@ import SwiftUI
 
 struct SuggestedView: View {
 
-    private let product = Product(
-        id: "product1",
-        name: "Poly Cube 2021",
-        imageName: "",
-        price: Price(id: "price1", amount: 8_000, currency: "฿")
-    )
+    let product: Product
+    var shopAction: (() -> Void)?
 
     var body: some View {
         ZStack {
             backgroundView
             contentView
+        }
+        .onTapGesture {
+            shopAction?()
         }
         .clipped()
     }
@@ -30,7 +29,7 @@ struct SuggestedView: View {
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 386.0)
 
-            Image("product-cube")
+            Image("dummy-tshirt/product-cube")
                 .offset(x: 45.0, y: 45.0)
         }
     }
@@ -53,12 +52,12 @@ struct SuggestedView: View {
         VStack(alignment: .leading) {
             Text("SUGGESTED FOR YOU")
                 .foregroundColor(.gray)
-                .font(.system(size: 13).bold())
+                .font(.system(size: 13, weight: .bold))
             Text("\(product.name) Collection")
                 .multilineTextAlignment(.leading)
                 .padding(.top, 4.0)
                 .foregroundColor(.white)
-                .font(.system(size: 34).bold())
+                .font(.system(size: 34, weight: .bold))
         }
     }
 
@@ -67,20 +66,20 @@ struct SuggestedView: View {
             VStack(alignment: .leading) {
                 Text("\(product.name)")
                     .foregroundColor(.white)
-                    .font(.system(size: 17).bold())
-                Text("From \(product.price.currency)\(product.price.amount)")
+                    .font(.smallTitle)
+                Text("From \(product.formattedPrice)")
                     .foregroundColor(.white)
-                    .font(.system(size: 13))
+                    .font(.smallDescription)
             }
 
             Spacer()
             Button("SHOP") {
-                print("Did tap shop button")
+                shopAction?()
             }
             .font(.system(size: 15).bold())
             .frame(width: 74.0, height: 30.0)
             .foregroundColor(.white)
-            .background(Color.purpleBlue)
+            .background(Color.indigoViolet)
             .cornerRadius(17.0)
         }
         .padding(.top, 10.0)
@@ -90,7 +89,7 @@ struct SuggestedView: View {
 struct SuggestedView_Previews: PreviewProvider {
 
     static var previews: some View {
-        SuggestedView()
+        SuggestedView(product: Product.suggestedProduct)
             .frame(width: UIScreen.main.bounds.width, height: 386.0)
     }
 }

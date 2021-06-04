@@ -19,6 +19,8 @@ struct SizeCell: View {
     private var text: some View {
         Text(viewModel.name)
             .textCase(.uppercase)
+            .font(.mediumDescription)
+            .foregroundColor(.charadeGray)
     }
 
     init(viewModel: SizeCellViewModel) {

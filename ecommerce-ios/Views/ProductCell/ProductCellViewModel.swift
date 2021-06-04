@@ -7,13 +7,27 @@
 
 struct ProductCellViewModel: Identifiable {
 
-    var id: Int
-    var name: String
-    var imageString: String
-    var price: Double
-    var currency: String
+    let id: String
+    let name: String
+    let imageString: String
+    let price: Double
+    let currency: String
 
+    var isLast: Bool = false
     var formattedPrice: String {
         "\(currency)\(price.formatted(with: .currencyWithNoDecimalDigit))"
+    }
+}
+
+extension ProductCellViewModel {
+
+    init(id: String, product: Product) {
+        self.init(
+            id: id,
+            name: product.name,
+            imageString: product.imageName,
+            price: product.price.amount,
+            currency: product.price.currency
+        )
     }
 }

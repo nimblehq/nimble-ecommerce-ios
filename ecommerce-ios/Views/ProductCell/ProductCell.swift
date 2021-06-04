@@ -18,10 +18,10 @@ struct ProductCell: View {
                     .resizable()
                     .aspectRatio(1.108, contentMode: .fit)
                 Text(viewModel.name.capitalized)
-                    .font(.headline)
+                    .font(.smallTitle)
                     .foregroundColor(.charadeGray)
                 Text(viewModel.formattedPrice)
-                    .font(.footnote)
+                    .font(.smallDescription)
                     .foregroundColor(.charadeGray)
             }
             Rectangle()
@@ -39,9 +39,6 @@ struct ProductCell: View {
                 }
         }
         .aspectRatio(contentMode: .fit)
-        .onTapGesture {
-            print("did tap product cell \(viewModel.name)")
-        }
     }
 }
 
@@ -50,9 +47,9 @@ struct ProductCell_Previews: PreviewProvider {
     static var previews: some View {
         ProductCell(
             viewModel: ProductCellViewModel(
-                id: 1,
+                id: "1",
                 name: "Pink cube",
-                imageString: "screen-search-result-tshirt/tshirt-cube-pink",
+                imageString: "dummy-tshirt/tshirt-cube-pink",
                 price: 10_000,
                 currency: "฿"
             )

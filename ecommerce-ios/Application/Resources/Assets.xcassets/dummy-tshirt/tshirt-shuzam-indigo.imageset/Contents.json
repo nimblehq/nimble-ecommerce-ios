@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tshirt-shuzam-indigo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -11,3 +11,12 @@ struct ColorCellViewModel: Identifiable, Equatable {
     let name: String
     let colorCode: String
 }
+
+extension ColorCellViewModel {
+
+    init(colorOption: ProductColorType) {
+        id = colorOption.rawValue
+        name = colorOption.name
+        colorCode = colorOption.code
+    }
+}

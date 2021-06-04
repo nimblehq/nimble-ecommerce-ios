@@ -18,9 +18,11 @@ struct ProfileAboutView: View {
                     .frame(width: 60.0, height: 60.0)
                 VStack(alignment: .leading) {
                     Text(viewModel.fullName)
-                        .font(.system(size: 17.0).weight(.semibold))
+                        .font(.smallTitle)
+                        .foregroundColor(.charadeGray)
                     Text(viewModel.email)
-                        .font(.system(size: 13.0).weight(.light))
+                        .font(.mediumDescription)
+                        .foregroundColor(.silverChaliceGray)
                 }
                 Spacer()
                 Image("common-icon/icon-disclosure")

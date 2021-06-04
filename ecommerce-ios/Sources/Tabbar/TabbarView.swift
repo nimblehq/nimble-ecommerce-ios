@@ -22,7 +22,10 @@ struct TabbarView: View {
             ProfileScreen()
                 .withTabbar($selection, tab: .profile)
         }
-        .accentColor(.mainBlue)
+        .accentColor(.indigoViolet)
+        .onOpenURL { _ in
+            selection = Constants.TabBar.search.rawValue
+        }
     }
 }
 
