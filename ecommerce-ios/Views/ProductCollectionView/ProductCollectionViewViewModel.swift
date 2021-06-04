@@ -7,12 +7,9 @@
 
 import Foundation
 
-struct ProductCollectionViewViewModel {
+final class ProductCollectionViewViewModel {
 
-    let sectionViewModels: [ProductSectionViewModel]
-}
-
-extension ProductCollectionViewViewModel {
+    var sectionViewModels: [ProductSectionViewModel] = []
 
     init() {
         sectionViewModels = Constants.Collection.allCases.map(ProductSectionViewModel.init)

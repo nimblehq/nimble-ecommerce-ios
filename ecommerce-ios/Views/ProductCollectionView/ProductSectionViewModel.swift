@@ -7,27 +7,31 @@
 
 import SwiftUI
 
-struct ProductSectionViewModel: Identifiable {
+final class ProductSectionViewModel: Identifiable {
 
     let id: Int
     let title: String
-    var cellViewModels: [ProductCellViewModel] = []
-}
-
-// MARK: - Dummy a product
-
-extension ProductSectionViewModel {
+    private(set) var cellViewModels: [ProductCellViewModel] = []
 
     init(collection: Constants.Collection) {
+        // Dummy a product
         var cellVMs: [ProductCellViewModel] = []
         for index in 0..<collection.numberOfItems {
-             let cellVM = ProductCellViewModel(
+             var cellVM = ProductCellViewModel(
                 id: "\(index)",
                 product: Product.products.first ?? Product.suggestedProduct
             )
+            cellVM.isLast = collection == .forYou && index == collection.numberOfItems - 1
             cellVMs.append(cellVM)
         }
-        self.init(id: collection.rawValue, title: collection.title, cellViewModels: cellVMs)
+        id = collection.rawValue
+        title = collection.title
+        cellViewModels = cellVMs
+    }
+
+    func appendCellVMs(vms: [ProductCellViewModel]) {
+        cellViewModels[cellViewModels.count - 1].isLast = false
+        cellViewModels.append(contentsOf: vms)
     }
 }
 

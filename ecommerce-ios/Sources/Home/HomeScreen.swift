@@ -15,6 +15,7 @@ struct HomeScreen: View {
     @State private var collectionName: String = ""
     @State private var gotoSuggestedCollection: Bool = false
     @State private var gotoCollection: Bool = false
+    @State private var isLoading: Bool = false
 
     var body: some View {
         NavigationView {
@@ -45,10 +46,24 @@ struct HomeScreen: View {
                         gotoCollection = true
                     }
 
-                    ProductCollectionView(viewModel: .init()) {
-                        collectionName = $0
-                        gotoCollection = true
-                    }
+                    ProductCollectionView(
+                        viewModel: .init(),
+                        goToCollection: {
+                            collectionName = $0
+                            gotoCollection = true
+                        },
+                        didScrollToEnd: {
+                            isLoading = true
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                isLoading = false
+                            }
+                        }
+                    )
+
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .hidden(!isLoading)
+                        .padding(.bottom, 10.0)
                 }
             }
             .navigationBarTitle(tab.title)
