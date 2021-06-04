@@ -36,6 +36,7 @@ struct SmallWidgetView: View {
 
             LogoView()
         }
+        .widgetURL(viewModel.productURL)
     }
 }
 
